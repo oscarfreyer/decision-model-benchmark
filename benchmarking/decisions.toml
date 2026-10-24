@@ -1,0 +1,61 @@
+schema_version = 2
+execution_workflow = "lean-decisions-v1"
+protocol_version = "2.5"
+protocol_project = "prj-202610-jev-medqa"
+accepted_decisions = ["core-decision-model-roster-20261007"]
+model_roster = ["D01"]
+
+[prompt]
+text = """Answer the medical multiple-choice question. Select exactly one supplied label.
+
+Question:
+{stem}
+
+Options:
+{options}
+"""
+
+[benchmark]
+id = "medqa"
+expected_evaluation_items = 1273
+closed_book = true
+
+[execution]
+study_registry = "benchmarking/output/studies"
+timeout_seconds = 600
+concurrency = 10
+scheduler_version = 3
+provider_concurrency = 10
+rate_limit_stop_after = 3
+schedule = "round_robin"
+seed = 20261006
+max_attempts = 1
+retries = false
+fallbacks = false
+
+[execution.provider_concurrency_overrides]
+[execution.provider_min_interval_seconds]
+OpenAI = 5.0
+
+[models.D01]
+display_name = "GPT-6 Luna Decisions"
+model_id = "openai/gpt-6-luna-decisions"
+base_model = "openai/gpt-6-luna-decisions"
+effort = "native"
+pair_id = ""
+adapter = "openai_decisions_gateway"
+route = "OpenAI"
+version = "openai/gpt-6-luna-decisions-20261006"
+region = ""
+endpoint = "https://openrouter.ai/api/alpha/decisions"
+probability_semantics = "unverified"
+concentration_semantics = "not_applicable"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "openai"
+provider_ignore = []
+# Oscar accepted this shared eligibility threshold on 2026-10-07.
+# Luna rounding precision is unverified; this is not a rounding guarantee.
+sum_tolerance = "0.02"
+precision_evidence = "Oscar accepted inclusive absolute sum deviation 0.02 on 2026-10-07, matching JEV eligibility. Luna docs support fractional probabilities but specify no rounding guarantee; both usable development receipts are one-hot. Passing v3 raw response SHA-256: b5e88f397023a2f4bd064a86f818fad565bb2da17f80f93792f90fe763ddb5fc. Rounding precision and probability semantics remain unverified."
+[models.D01.request_settings]

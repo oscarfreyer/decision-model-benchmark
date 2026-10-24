@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite the study and the versioned code/data release you use."
+type: software
+title: "Benchmarking decision models against generative large language models on medical multiple-choice questions"
+version: "0.1.0-rc3"
+license: MIT
+authors:
+  - family-names: Freyer
+    given-names: Oscar
+  - family-names: Glauert
+    given-names: Daniel
+  - family-names: Hofmann
+    given-names: Moritz
+  - family-names: Ostermann
+    given-names: Max
+  - family-names: Gilbert
+    given-names: Stephen
+  - family-names: Kather
+    given-names: Jakob Nikolas
+abstract: "Code and structured saved results for a 28-configuration MedQA benchmark, with the frozen A4 presentation."

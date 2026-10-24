@@ -1,0 +1,51 @@
+{
+  "original_inputs_remain_private": true,
+  "outcomes_source": "frozen review_tables.selected_attempts plus original selected attempts from verified historical and extension records",
+  "call_source": "all 69,318 initial and retry records named by saved selection.duration_attempt_ids",
+  "retained_record_fields": [
+    "identity",
+    "status",
+    "selected_label",
+    "failure_reason",
+    "usage",
+    "billing",
+    "timing",
+    "native probability vector",
+    "scientific routing/controls",
+    "scheduler provider"
+  ],
+  "omitted_record_fields": [
+    "request/response bodies",
+    "reasoning text",
+    "artifact paths and payloads",
+    "provider request identifiers",
+    "extra provider scalars",
+    "credentials",
+    "embedded sources",
+    "question stems/option text/explicit reference-key fields"
+  ],
+  "summary_metadata_omitted": [
+    "bindings",
+    "source_packages",
+    "collection_conditions",
+    "inputs",
+    "coverage.collection_conditions"
+  ],
+  "scientific_summary_values": "retained unchanged; omitted fields contain source/environment/collection provenance, not estimates",
+  "original_result_sha256": "ca1458a83bde51062875a4d35e8e39098d34669028aa1c5e510cf9db41827d4f",
+  "historical_attempts_sha256": "beb555aab165ec6758ca11acbda585e56e9a1726ea38f16762b384aa2a64deea",
+  "extension_events_sha256": "c8b55d5bc973f9c603838024672de79d74cc13472538adf54a535d7e012a105a",
+  "reference_key_disclosure": {
+    "separate_reference_key_file_included": false,
+    "explicit_reference_key_fields_included": false,
+    "upstream_medqa_reference_keys_public": true,
+    "selected_labels_and_correctness_can_reveal_reference_answers": true,
+    "recalculation_key_source": "Exact hash-verified upstream MedQA test file; see README.md"
+  },
+  "configuration_metadata": {
+    "G15_effort": "none",
+    "G15_variant": "Instant; thinking disabled",
+    "run_order": "replicate, then frozen G01-G15/D01-D13 roster",
+    "scientific_outcomes_and_results": "unchanged from RC2"
+  }
+}

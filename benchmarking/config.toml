@@ -1,0 +1,378 @@
+schema_version = 2
+execution_workflow = "lean-v1"
+protocol_version = "2.3"
+protocol_project = "prj-202610-jev-medqa"
+accepted_decisions = ["D-01a", "D-03", "D-04", "D-05a", "D-05b", "D-07a", "R1-native-pairs-20261005", "R1-unknown-region-20261005", "R1-requested-token-target-20261005", "preprint-budget-roster-20261006", "preprint-kimi-instant-replacement-20261006", "provider-concurrency-overrides-20261006", "separate-execution-analysis-freezes-20261006", "R5-observed-cost-unverified-tokens-20261006"]
+model_roster = ["C03", "C05", "C06", "C09", "C11", "C13", "C14", "C15", "C17", "C18", "C19", "C22", "C23", "C24", "C25", "J01"]
+
+[prompt]
+text = """Answer the medical multiple-choice question. Select exactly one supplied label. Return only a final JSON object with exactly one field: {"answer": "A"}. Use the selected label in place of A.
+
+Question:
+{stem}
+
+Options:
+{options}
+"""
+
+[benchmark]
+id = "medqa"
+expected_evaluation_items = 1273
+closed_book = true
+
+[execution]
+study_registry = "benchmarking/output/studies"
+timeout_seconds = 600
+concurrency = 10
+scheduler_version = 3
+provider_concurrency = 10
+rate_limit_stop_after = 3
+schedule = "round_robin"
+seed = 20261006
+max_attempts = 1
+retries = false
+fallbacks = false
+total_generated_token_allowance = 16384
+
+[execution.provider_concurrency_overrides]
+SiliconFlow = 10
+InferenceNet = 10
+
+[execution.provider_min_interval_seconds]
+InferenceNet = 5.0
+Mistral = 2.0
+OpenAI = 5.0
+
+
+[models.C03]
+display_name = "GPT-6.1 Sol Low"
+model_id = "openai/gpt-6.1-sol"
+base_model = "openai/gpt-6.1-sol"
+effort = "low"
+pair_id = ""
+adapter = "openrouter"
+route = "OpenAI"
+version = "openai/gpt-6.1-sol"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "openai"
+provider_ignore = ["openai/flex", "openai/fast"]
+[models.C03.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = true, effort = "low" }
+
+[models.C05]
+display_name = "GPT-6 Luna Low"
+model_id = "openai/gpt-6-luna"
+base_model = "openai/gpt-6-luna"
+effort = "low"
+pair_id = "P03"
+adapter = "openrouter"
+route = "OpenAI"
+version = "openai/gpt-6-luna"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "openai"
+provider_ignore = ["openai/flex", "openai/fast"]
+[models.C05.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = true, effort = "low" }
+
+[models.C06]
+display_name = "GPT-6 Luna High"
+model_id = "openai/gpt-6-luna"
+base_model = "openai/gpt-6-luna"
+effort = "high"
+pair_id = "P03"
+adapter = "openrouter"
+route = "OpenAI"
+version = "openai/gpt-6-luna"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "openai"
+provider_ignore = ["openai/flex", "openai/fast"]
+[models.C06.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = true, effort = "high" }
+
+[models.C09]
+display_name = "Claude Sonnet 5.5 Low"
+model_id = "anthropic/claude-sonnet-5.5"
+base_model = "anthropic/claude-sonnet-5.5"
+effort = "low"
+pair_id = ""
+adapter = "openrouter"
+route = "Anthropic"
+version = "anthropic/claude-sonnet-5.5"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "anthropic"
+provider_ignore = []
+[models.C09.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = true, effort = "low" }
+
+[models.C11]
+display_name = "Gemini 3.8 Flash Low"
+model_id = "google/gemini-3.8-flash"
+base_model = "google/gemini-3.8-flash"
+effort = "low"
+pair_id = ""
+adapter = "openrouter"
+route = "Google AI Studio"
+version = "google/gemini-3.8-flash"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "google-ai-studio"
+provider_ignore = ["google-ai-studio/flex", "google-ai-studio/priority"]
+[models.C11.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = true, effort = "low" }
+
+[models.C13]
+display_name = "DeepSeek V4.1 Flash Low"
+model_id = "deepseek/deepseek-v4.1-flash"
+base_model = "deepseek/deepseek-v4.1-flash"
+effort = "low"
+pair_id = "P07"
+adapter = "openrouter"
+route = "InferenceNet"
+version = "deepseek/deepseek-v4.1-flash"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "inference-net"
+provider_ignore = []
+[models.C13.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = true, effort = "low" }
+
+[models.C14]
+display_name = "DeepSeek V4.1 Flash High"
+model_id = "deepseek/deepseek-v4.1-flash"
+base_model = "deepseek/deepseek-v4.1-flash"
+effort = "high"
+pair_id = "P07"
+adapter = "openrouter"
+route = "InferenceNet"
+version = "deepseek/deepseek-v4.1-flash"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "inference-net"
+provider_ignore = []
+[models.C14.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = true, effort = "high" }
+
+[models.C15]
+display_name = "Qwen3.8 Max Low"
+model_id = "qwen/qwen3.8-max-0902"
+base_model = "qwen/qwen3.8-max-0902"
+effort = "low"
+pair_id = ""
+adapter = "openrouter"
+route = "Alibaba"
+version = "qwen/qwen3.8-max-0902"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "alibaba"
+provider_ignore = []
+[models.C15.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = true, effort = "low" }
+
+[models.C17]
+display_name = "Qwen3.8-27B Low"
+model_id = "qwen/qwen3.8-27b"
+base_model = "qwen/qwen3.8-27b"
+effort = "low"
+pair_id = "P09"
+adapter = "openrouter"
+route = "Mancer 2"
+version = "qwen/qwen3.8-27b"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "mancer/fp8"
+provider_ignore = []
+[models.C17.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = true, effort = "low" }
+
+[models.C18]
+display_name = "Qwen3.8-27B Xhigh"
+model_id = "qwen/qwen3.8-27b"
+base_model = "qwen/qwen3.8-27b"
+effort = "xhigh"
+pair_id = "P09"
+adapter = "openrouter"
+route = "Mancer 2"
+version = "qwen/qwen3.8-27b"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "mancer/fp8"
+provider_ignore = []
+[models.C18.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = true, effort = "xhigh" }
+
+[models.C19]
+display_name = "Mistral Medium 3.5 None"
+model_id = "mistralai/mistral-medium-3-5"
+base_model = "mistralai/mistral-medium-3-5"
+effort = "none"
+pair_id = ""
+adapter = "openrouter"
+route = "Mistral"
+version = "mistralai/mistral-medium-3-5"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "mistral"
+provider_ignore = ["mistral/zdr", "mistral/eu"]
+[models.C19.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = false, effort = "none" }
+
+[models.C22]
+display_name = "GLM-5 Standard/native"
+model_id = "z-ai/glm-5"
+base_model = "z-ai/glm-5"
+effort = "native"
+pair_id = ""
+adapter = "openrouter"
+route = "Baidu"
+version = "z-ai/glm-5"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "baidu/fp8"
+provider_ignore = []
+[models.C22.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = true }
+
+[models.C23]
+display_name = "Kimi K2.5 Standard/native"
+model_id = "moonshotai/kimi-k2.5"
+base_model = "moonshotai/kimi-k2.5"
+effort = "native"
+pair_id = ""
+adapter = "openrouter"
+route = "SiliconFlow"
+version = "moonshotai/kimi-k2.5"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "siliconflow/int4"
+provider_ignore = []
+[models.C23.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = true }
+
+[models.C24]
+display_name = "Llama 4 Maverick Standard"
+model_id = "meta-llama/llama-4-maverick"
+base_model = "meta-llama/llama-4-maverick"
+effort = "standard"
+pair_id = ""
+adapter = "openrouter"
+route = "DigitalOcean"
+version = "meta-llama/llama-4-maverick"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "digitalocean"
+provider_ignore = []
+[models.C24.request_settings]
+max_completion_tokens = 16384
+
+[models.C25]
+display_name = "Kimi K2.5 Instant"
+model_id = "moonshotai/kimi-k2.5"
+base_model = "moonshotai/kimi-k2.5"
+effort = "none"
+pair_id = ""
+adapter = "openrouter"
+route = "SiliconFlow"
+version = "moonshotai/kimi-k2.5"
+region = ""
+endpoint = "https://openrouter.ai/api/v1/chat/completions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_slug = "siliconflow/int4"
+provider_ignore = []
+[models.C25.request_settings]
+max_completion_tokens = 16384
+reasoning = { enabled = false }
+
+[models.J01]
+display_name = "JEV 1.13"
+model_id = "typesafe/jev-1.13"
+base_model = "typesafe/jev-1.13"
+effort = "native"
+pair_id = ""
+adapter = "jev_gateway"
+provider_slug = "typesafe"
+route = "TypeSafe"
+version = "typesafe/jev-1.13-20260917"
+region = ""
+endpoint = "https://openrouter.ai/api/alpha/decisions"
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = "observed_usd_native_token_counters_unverified"
+reasoning_in_output = ""
+provider_ignore = []
+[models.J01.request_settings]

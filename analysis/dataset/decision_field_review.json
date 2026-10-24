@@ -1,0 +1,271 @@
+{
+  "package_inventory_sha256": "aae961bf166d8c655832998322e980781edd70fd36e55e31f0cc351c927f1929",
+  "package_manifest_sha256": "a1ea97ebae6822012d6c2ceb84a676b9a13ce5f32baca56c6dbdf770ccedf184",
+  "review_id": "decision-fields-20261012",
+  "reviewed_at": "2026-10-12",
+  "reviewer": "Codex; requested by Oscar",
+  "schema_version": 1,
+  "source_record_sha256": "9015a40af5f5b7ac94ab080c34298cbf6b2a9dda50625dd12bc895875c5b0c9d",
+  "models": {
+    "D03": {
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "model_id": "jaredpalmer/kev-4b",
+      "probability_semantics": {
+        "evidence": "Model-specific OpenRouter description, System One Choice schema, and preserved development response/label/decimal checks.",
+        "meaning": "native_label_indexed_choice_probability",
+        "reviewed": true
+      },
+      "provider": "SiliconFlow",
+      "returned_model": "jaredpalmer/kev-4b-20260924",
+      "selected_label_field": "answers.answer.choice",
+      "sources": [
+        "https://openrouter.ai/jaredpalmer/kev-4b",
+        "https://openrouter.ai/docs/api/api-reference/systemone/submit-a-system-one-request",
+        "https://github.com/jaredpalmer/kev#api"
+      ],
+      "surface": "systemone",
+      "vector_field": "answers.answer.probabilities"
+    },
+    "D04": {
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "model_id": "upstage/solar-decide",
+      "probability_semantics": {
+        "evidence": "Model-specific OpenRouter description, System One Choice schema, and preserved development response/label/decimal checks.",
+        "meaning": "native_label_indexed_choice_probability",
+        "reviewed": true
+      },
+      "provider": "Upstage",
+      "returned_model": "upstage/solar-decide-20260928",
+      "selected_label_field": "answers.answer.choice",
+      "sources": [
+        "https://openrouter.ai/upstage/solar-decide",
+        "https://openrouter.ai/docs/api/api-reference/systemone/submit-a-system-one-request",
+        "https://console.upstage.ai/docs/models/solar-decide"
+      ],
+      "surface": "systemone",
+      "vector_field": "answers.answer.probabilities"
+    },
+    "D05": {
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "model_id": "inception/mercury-decide",
+      "probability_semantics": {
+        "evidence": "Model-specific OpenRouter description, System One Choice schema, and preserved development response/label/decimal checks.",
+        "meaning": "native_label_indexed_choice_probability",
+        "reviewed": true
+      },
+      "provider": "Inception",
+      "returned_model": "inception/mercury-decide-20260930",
+      "selected_label_field": "answers.answer.choice",
+      "sources": [
+        "https://openrouter.ai/inception/mercury-decide",
+        "https://openrouter.ai/docs/api/api-reference/systemone/submit-a-system-one-request"
+      ],
+      "surface": "systemone",
+      "vector_field": "answers.answer.probabilities"
+    },
+    "D06": {
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "model_id": "cloudflare/clef",
+      "probability_semantics": {
+        "evidence": "Model-specific OpenRouter description, System One Choice schema, and preserved development response/label/decimal checks.",
+        "meaning": "native_label_indexed_choice_probability",
+        "reviewed": true
+      },
+      "provider": "Cloudflare",
+      "returned_model": "cloudflare/clef",
+      "selected_label_field": "answers.answer.choice",
+      "sources": [
+        "https://openrouter.ai/cloudflare/clef",
+        "https://openrouter.ai/docs/api/api-reference/systemone/submit-a-system-one-request",
+        "https://huggingface.co/Cloudflare/clef/raw/main/README.md"
+      ],
+      "surface": "systemone",
+      "vector_field": "answers.answer.probabilities"
+    },
+    "D07": {
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "model_id": "cloudflare/clef-flash",
+      "probability_semantics": {
+        "evidence": "Model-specific OpenRouter description, System One Choice schema, and preserved development response/label/decimal checks.",
+        "meaning": "native_label_indexed_choice_probability",
+        "reviewed": true
+      },
+      "provider": "Cloudflare",
+      "returned_model": "cloudflare/clef-flash",
+      "selected_label_field": "answers.answer.choice",
+      "sources": [
+        "https://openrouter.ai/cloudflare/clef-flash",
+        "https://openrouter.ai/docs/api/api-reference/systemone/submit-a-system-one-request",
+        "https://huggingface.co/Cloudflare/clef-flash/raw/main/README.md"
+      ],
+      "surface": "systemone",
+      "vector_field": "answers.answer.probabilities"
+    },
+    "D08": {
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "model_id": "liquid/d1",
+      "probability_semantics": {
+        "evidence": "Model-specific OpenRouter description, System One Choice schema, and preserved development response/label/decimal checks.",
+        "meaning": "native_label_indexed_choice_probability",
+        "reviewed": true
+      },
+      "provider": "Liquid",
+      "returned_model": "liquid/d1-20260930",
+      "selected_label_field": "answers.answer.choice",
+      "sources": [
+        "https://openrouter.ai/liquid/d1",
+        "https://openrouter.ai/docs/api/api-reference/systemone/submit-a-system-one-request"
+      ],
+      "surface": "systemone",
+      "vector_field": "answers.answer.probabilities"
+    },
+    "D09": {
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "model_id": "perplexity/pplx-decider-v1.1-27b",
+      "probability_semantics": {
+        "evidence": "Model-specific OpenRouter description, System One Choice schema, and preserved development response/label/decimal checks.",
+        "meaning": "native_label_indexed_choice_probability",
+        "reviewed": true
+      },
+      "provider": "Perplexity",
+      "returned_model": "perplexity/pplx-decider-v1.1-27b-20261006",
+      "selected_label_field": "answers.answer.choice",
+      "sources": [
+        "https://openrouter.ai/perplexity/pplx-decider-v1.1-27b",
+        "https://openrouter.ai/docs/api/api-reference/systemone/submit-a-system-one-request",
+        "https://huggingface.co/perplexity-ai/pplx-decider-v1.1-27b/raw/main/README.md"
+      ],
+      "surface": "systemone",
+      "vector_field": "answers.answer.probabilities"
+    },
+    "D10": {
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "model_id": "upstage/solar-decide-flash",
+      "probability_semantics": {
+        "evidence": "Model-specific OpenRouter description, System One Choice schema, and preserved development response/label/decimal checks.",
+        "meaning": "native_label_indexed_choice_probability",
+        "reviewed": true
+      },
+      "provider": "Upstage",
+      "returned_model": "upstage/solar-decide-flash-20261008",
+      "selected_label_field": "answers.answer.choice",
+      "sources": [
+        "https://openrouter.ai/upstage/solar-decide-flash",
+        "https://openrouter.ai/docs/api/api-reference/systemone/submit-a-system-one-request"
+      ],
+      "surface": "systemone",
+      "vector_field": "answers.answer.probabilities"
+    },
+    "D11": {
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "model_id": "cloudflare/clef-omni",
+      "probability_semantics": {
+        "evidence": "Model-specific OpenRouter description, System One Choice schema, and preserved development response/label/decimal checks.",
+        "meaning": "native_label_indexed_choice_probability",
+        "reviewed": true
+      },
+      "provider": "Cloudflare",
+      "returned_model": "cloudflare/clef-omni-20261009",
+      "selected_label_field": "answers.answer.choice",
+      "sources": [
+        "https://openrouter.ai/cloudflare/clef-omni",
+        "https://openrouter.ai/docs/api/api-reference/systemone/submit-a-system-one-request"
+      ],
+      "surface": "systemone",
+      "vector_field": "answers.answer.probabilities"
+    },
+    "D12": {
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "model_id": "nace-ai/drex-v1.5",
+      "probability_semantics": {
+        "evidence": "Model-specific OpenRouter description, System One Choice schema, and preserved development response/label/decimal checks.",
+        "meaning": "native_label_indexed_choice_probability",
+        "reviewed": true
+      },
+      "provider": "DeepInfra",
+      "returned_model": "nace-ai/drex-v1.5-20261009",
+      "selected_label_field": "answers.answer.choice",
+      "sources": [
+        "https://openrouter.ai/nace-ai/drex-v1.5",
+        "https://openrouter.ai/docs/api/api-reference/systemone/submit-a-system-one-request"
+      ],
+      "surface": "systemone",
+      "vector_field": "answers.answer.probabilities"
+    },
+    "D13": {
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "model_id": "microsoft/microsoft-decision-1",
+      "probability_semantics": {
+        "evidence": "Model-specific OpenRouter description, System One Choice schema, and preserved development response/label/decimal checks.",
+        "meaning": "native_label_indexed_choice_probability",
+        "reviewed": true
+      },
+      "provider": "Azure",
+      "returned_model": "microsoft/microsoft-decision-1-20261009",
+      "selected_label_field": "answers.answer.choice",
+      "sources": [
+        "https://openrouter.ai/microsoft/microsoft-decision-1",
+        "https://openrouter.ai/docs/api/api-reference/systemone/submit-a-system-one-request",
+        "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/"
+      ],
+      "surface": "systemone",
+      "vector_field": "answers.answer.probabilities"
+    }
+  },
+  "scope": "Public projection of the reviewed probability-field definitions; raw development evidence remains private."
+}

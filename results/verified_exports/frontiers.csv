@@ -1,0 +1,225 @@
+basis,projection,configuration,nondominated,excluded,dominated_by,excluded.missing_coordinates
+observed_usd,accuracy_cost,G01,True,,[],
+observed_usd,accuracy_cost,G02,True,,[],
+observed_usd,accuracy_cost,G03,True,,[],
+observed_usd,accuracy_cost,G04,False,,,['cost']
+observed_usd,accuracy_cost,G05,False,,['G01'],
+observed_usd,accuracy_cost,G06,True,,[],
+observed_usd,accuracy_cost,G07,False,,"['G03', 'G06']",
+observed_usd,accuracy_cost,G08,False,,"['G01', 'G02', 'G03', 'G05', 'G06', 'G07', 'G09', 'G10']",
+observed_usd,accuracy_cost,G09,False,,"['G01', 'G02', 'G03', 'G05', 'G06', 'G07']",
+observed_usd,accuracy_cost,G10,False,,"['G01', 'G05', 'G06']",
+observed_usd,accuracy_cost,G11,False,,"['G02', 'G03', 'G06', 'G07', 'G14', 'G15', 'D01', 'D04', 'D05', 'D06', 'D08', 'D09', 'D11', 'D13']",
+observed_usd,accuracy_cost,G12,False,,"['G01', 'G03', 'G05', 'G06', 'G10']",
+observed_usd,accuracy_cost,G13,False,,"['G01', 'G03', 'G05', 'G06', 'G07', 'G10']",
+observed_usd,accuracy_cost,G14,False,,"['D01', 'D05', 'D08', 'D09']",
+observed_usd,accuracy_cost,G15,False,,"['G02', 'G03', 'D01', 'D05', 'D08', 'D09']",
+observed_usd,accuracy_cost,D01,False,,['D08'],
+observed_usd,accuracy_cost,D02,False,,,['cost']
+observed_usd,accuracy_cost,D03,False,,"['D05', 'D08', 'D09', 'D12']",
+observed_usd,accuracy_cost,D04,False,,"['D01', 'D05', 'D08', 'D09']",
+observed_usd,accuracy_cost,D05,True,,[],
+observed_usd,accuracy_cost,D06,False,,"['G02', 'D01', 'D05', 'D08', 'D09']",
+observed_usd,accuracy_cost,D07,False,,"['D05', 'D08', 'D09', 'D13']",
+observed_usd,accuracy_cost,D08,True,,[],
+observed_usd,accuracy_cost,D09,True,,[],
+observed_usd,accuracy_cost,D10,False,,"['D01', 'D04', 'D05', 'D07', 'D08', 'D09', 'D12', 'D13']",
+observed_usd,accuracy_cost,D11,False,,"['G14', 'D01', 'D04', 'D05', 'D08', 'D09', 'D13']",
+observed_usd,accuracy_cost,D12,False,,"['D05', 'D09']",
+observed_usd,accuracy_cost,D13,False,,"['D05', 'D08', 'D09']",
+observed_usd,three_dimensional,G01,True,,[],
+observed_usd,three_dimensional,G02,True,,[],
+observed_usd,three_dimensional,G03,True,,[],
+observed_usd,three_dimensional,G04,False,,,['cost']
+observed_usd,three_dimensional,G05,False,,['G01'],
+observed_usd,three_dimensional,G06,True,,[],
+observed_usd,three_dimensional,G07,False,,"['G03', 'G06']",
+observed_usd,three_dimensional,G08,False,,"['G01', 'G02', 'G03', 'G05', 'G06', 'G07', 'G09', 'G10']",
+observed_usd,three_dimensional,G09,False,,"['G01', 'G02', 'G03', 'G05', 'G06', 'G07']",
+observed_usd,three_dimensional,G10,False,,"['G01', 'G05', 'G06']",
+observed_usd,three_dimensional,G11,False,,"['D01', 'D08', 'D09', 'D11', 'D13']",
+observed_usd,three_dimensional,G12,False,,"['G01', 'G03', 'G05', 'G06', 'G10']",
+observed_usd,three_dimensional,G13,False,,"['G01', 'G03', 'G05', 'G06', 'G07', 'G10']",
+observed_usd,three_dimensional,G14,False,,"['D01', 'D05', 'D08', 'D09']",
+observed_usd,three_dimensional,G15,False,,"['D01', 'D05', 'D08', 'D09']",
+observed_usd,three_dimensional,D01,True,,[],
+observed_usd,three_dimensional,D02,False,,,['cost']
+observed_usd,three_dimensional,D03,False,,"['D05', 'D08', 'D09']",
+observed_usd,three_dimensional,D04,False,,"['D01', 'D05', 'D08', 'D09']",
+observed_usd,three_dimensional,D05,True,,[],
+observed_usd,three_dimensional,D06,False,,"['D01', 'D05', 'D08', 'D09']",
+observed_usd,three_dimensional,D07,False,,"['D05', 'D08', 'D09', 'D13']",
+observed_usd,three_dimensional,D08,True,,[],
+observed_usd,three_dimensional,D09,True,,[],
+observed_usd,three_dimensional,D10,False,,"['D01', 'D05', 'D07', 'D08', 'D09', 'D12', 'D13']",
+observed_usd,three_dimensional,D11,True,,[],
+observed_usd,three_dimensional,D12,False,,"['D05', 'D09']",
+observed_usd,three_dimensional,D13,False,,"['D08', 'D09']",
+accuracy_latency,accuracy_latency,G01,True,,[],
+accuracy_latency,accuracy_latency,G02,False,,"['G01', 'G04']",
+accuracy_latency,accuracy_latency,G03,False,,['G01'],
+accuracy_latency,accuracy_latency,G04,True,,[],
+accuracy_latency,accuracy_latency,G05,False,,['G01'],
+accuracy_latency,accuracy_latency,G06,False,,['G01'],
+accuracy_latency,accuracy_latency,G07,False,,"['G01', 'G03', 'G04', 'G05', 'G06']",
+accuracy_latency,accuracy_latency,G08,False,,"['G01', 'G02', 'G03', 'G04', 'G05', 'G06', 'G07', 'G09', 'G10', 'G12']",
+accuracy_latency,accuracy_latency,G09,False,,"['G01', 'G02', 'G03', 'G04', 'G05', 'G06', 'G07', 'G10']",
+accuracy_latency,accuracy_latency,G10,False,,"['G01', 'G05', 'G06']",
+accuracy_latency,accuracy_latency,G11,False,,"['D01', 'D02', 'D08', 'D09', 'D11', 'D13']",
+accuracy_latency,accuracy_latency,G12,False,,"['G01', 'G03', 'G04', 'G05', 'G06', 'G10']",
+accuracy_latency,accuracy_latency,G13,False,,"['G01', 'G03', 'G04', 'G05', 'G06', 'G07', 'G10', 'G12']",
+accuracy_latency,accuracy_latency,G14,False,,"['D01', 'D02', 'D05', 'D06', 'D08', 'D09']",
+accuracy_latency,accuracy_latency,G15,False,,"['G04', 'D01', 'D02', 'D05', 'D08', 'D09']",
+accuracy_latency,accuracy_latency,D01,True,,[],
+accuracy_latency,accuracy_latency,D02,True,,[],
+accuracy_latency,accuracy_latency,D03,False,,"['G11', 'D01', 'D02', 'D05', 'D06', 'D07', 'D08', 'D09', 'D11', 'D13']",
+accuracy_latency,accuracy_latency,D04,False,,"['D01', 'D02', 'D05', 'D06', 'D08', 'D09']",
+accuracy_latency,accuracy_latency,D05,False,,"['D01', 'D02', 'D08', 'D09']",
+accuracy_latency,accuracy_latency,D06,False,,"['D01', 'D02', 'D05', 'D08', 'D09']",
+accuracy_latency,accuracy_latency,D07,False,,"['G11', 'D01', 'D02', 'D05', 'D06', 'D08', 'D09', 'D11', 'D13']",
+accuracy_latency,accuracy_latency,D08,False,,['D02'],
+accuracy_latency,accuracy_latency,D09,False,,"['D01', 'D02', 'D08']",
+accuracy_latency,accuracy_latency,D10,False,,"['G11', 'D01', 'D02', 'D05', 'D06', 'D07', 'D08', 'D09', 'D11', 'D12', 'D13']",
+accuracy_latency,accuracy_latency,D11,True,,[],
+accuracy_latency,accuracy_latency,D12,False,,"['G11', 'D01', 'D02', 'D05', 'D06', 'D07', 'D08', 'D09', 'D11', 'D13']",
+accuracy_latency,accuracy_latency,D13,False,,"['D01', 'D02', 'D08', 'D09']",
+estimated_usd,accuracy_cost,G01,False,,,['cost']
+estimated_usd,accuracy_cost,G02,False,,,['cost']
+estimated_usd,accuracy_cost,G03,False,,,['cost']
+estimated_usd,accuracy_cost,G04,False,,,['cost']
+estimated_usd,accuracy_cost,G05,False,,,['cost']
+estimated_usd,accuracy_cost,G06,False,,,['cost']
+estimated_usd,accuracy_cost,G07,False,,,['cost']
+estimated_usd,accuracy_cost,G08,False,,,['cost']
+estimated_usd,accuracy_cost,G09,False,,,['cost']
+estimated_usd,accuracy_cost,G10,False,,,['cost']
+estimated_usd,accuracy_cost,G11,False,,,['cost']
+estimated_usd,accuracy_cost,G12,False,,,['cost']
+estimated_usd,accuracy_cost,G13,False,,,['cost']
+estimated_usd,accuracy_cost,G14,False,,,['cost']
+estimated_usd,accuracy_cost,G15,False,,,['cost']
+estimated_usd,accuracy_cost,D01,False,,,['cost']
+estimated_usd,accuracy_cost,D02,False,,,['cost']
+estimated_usd,accuracy_cost,D03,False,,,['cost']
+estimated_usd,accuracy_cost,D04,False,,,['cost']
+estimated_usd,accuracy_cost,D05,False,,,['cost']
+estimated_usd,accuracy_cost,D06,False,,,['cost']
+estimated_usd,accuracy_cost,D07,False,,,['cost']
+estimated_usd,accuracy_cost,D08,False,,,['cost']
+estimated_usd,accuracy_cost,D09,False,,,['cost']
+estimated_usd,accuracy_cost,D10,False,,,['cost']
+estimated_usd,accuracy_cost,D11,False,,,['cost']
+estimated_usd,accuracy_cost,D12,False,,,['cost']
+estimated_usd,accuracy_cost,D13,False,,,['cost']
+estimated_usd,three_dimensional,G01,False,,,['cost']
+estimated_usd,three_dimensional,G02,False,,,['cost']
+estimated_usd,three_dimensional,G03,False,,,['cost']
+estimated_usd,three_dimensional,G04,False,,,['cost']
+estimated_usd,three_dimensional,G05,False,,,['cost']
+estimated_usd,three_dimensional,G06,False,,,['cost']
+estimated_usd,three_dimensional,G07,False,,,['cost']
+estimated_usd,three_dimensional,G08,False,,,['cost']
+estimated_usd,three_dimensional,G09,False,,,['cost']
+estimated_usd,three_dimensional,G10,False,,,['cost']
+estimated_usd,three_dimensional,G11,False,,,['cost']
+estimated_usd,three_dimensional,G12,False,,,['cost']
+estimated_usd,three_dimensional,G13,False,,,['cost']
+estimated_usd,three_dimensional,G14,False,,,['cost']
+estimated_usd,three_dimensional,G15,False,,,['cost']
+estimated_usd,three_dimensional,D01,False,,,['cost']
+estimated_usd,three_dimensional,D02,False,,,['cost']
+estimated_usd,three_dimensional,D03,False,,,['cost']
+estimated_usd,three_dimensional,D04,False,,,['cost']
+estimated_usd,three_dimensional,D05,False,,,['cost']
+estimated_usd,three_dimensional,D06,False,,,['cost']
+estimated_usd,three_dimensional,D07,False,,,['cost']
+estimated_usd,three_dimensional,D08,False,,,['cost']
+estimated_usd,three_dimensional,D09,False,,,['cost']
+estimated_usd,three_dimensional,D10,False,,,['cost']
+estimated_usd,three_dimensional,D11,False,,,['cost']
+estimated_usd,three_dimensional,D12,False,,,['cost']
+estimated_usd,three_dimensional,D13,False,,,['cost']
+analysis_usd,accuracy_cost,G01,True,,[],
+analysis_usd,accuracy_cost,G02,True,,[],
+analysis_usd,accuracy_cost,G03,True,,[],
+analysis_usd,accuracy_cost,G04,False,,"['G01', 'G03', 'G05', 'G06']",
+analysis_usd,accuracy_cost,G05,False,,['G01'],
+analysis_usd,accuracy_cost,G06,True,,[],
+analysis_usd,accuracy_cost,G07,False,,"['G03', 'G06']",
+analysis_usd,accuracy_cost,G08,False,,"['G01', 'G02', 'G03', 'G04', 'G05', 'G06', 'G07', 'G09', 'G10']",
+analysis_usd,accuracy_cost,G09,False,,"['G01', 'G02', 'G03', 'G04', 'G05', 'G06', 'G07']",
+analysis_usd,accuracy_cost,G10,False,,"['G01', 'G05', 'G06']",
+analysis_usd,accuracy_cost,G11,False,,"['G02', 'G03', 'G06', 'G07', 'G14', 'G15', 'D01', 'D02', 'D04', 'D05', 'D06', 'D08', 'D09', 'D11', 'D13']",
+analysis_usd,accuracy_cost,G12,False,,"['G01', 'G03', 'G04', 'G05', 'G06', 'G10']",
+analysis_usd,accuracy_cost,G13,False,,"['G01', 'G03', 'G04', 'G05', 'G06', 'G07', 'G10']",
+analysis_usd,accuracy_cost,G14,False,,"['D01', 'D02', 'D05', 'D08', 'D09']",
+analysis_usd,accuracy_cost,G15,False,,"['G02', 'G03', 'D01', 'D02', 'D05', 'D08', 'D09']",
+analysis_usd,accuracy_cost,D01,False,,['D08'],
+analysis_usd,accuracy_cost,D02,True,,[],
+analysis_usd,accuracy_cost,D03,False,,"['D05', 'D08', 'D09', 'D12']",
+analysis_usd,accuracy_cost,D04,False,,"['D01', 'D05', 'D08', 'D09']",
+analysis_usd,accuracy_cost,D05,True,,[],
+analysis_usd,accuracy_cost,D06,False,,"['G02', 'D01', 'D02', 'D05', 'D08', 'D09']",
+analysis_usd,accuracy_cost,D07,False,,"['D05', 'D08', 'D09', 'D13']",
+analysis_usd,accuracy_cost,D08,True,,[],
+analysis_usd,accuracy_cost,D09,True,,[],
+analysis_usd,accuracy_cost,D10,False,,"['D01', 'D04', 'D05', 'D07', 'D08', 'D09', 'D12', 'D13']",
+analysis_usd,accuracy_cost,D11,False,,"['G14', 'D01', 'D02', 'D04', 'D05', 'D08', 'D09', 'D13']",
+analysis_usd,accuracy_cost,D12,False,,"['D05', 'D09']",
+analysis_usd,accuracy_cost,D13,False,,"['D05', 'D08', 'D09']",
+analysis_usd,three_dimensional,G01,True,,[],
+analysis_usd,three_dimensional,G02,True,,[],
+analysis_usd,three_dimensional,G03,True,,[],
+analysis_usd,three_dimensional,G04,True,,[],
+analysis_usd,three_dimensional,G05,False,,['G01'],
+analysis_usd,three_dimensional,G06,True,,[],
+analysis_usd,three_dimensional,G07,False,,"['G03', 'G06']",
+analysis_usd,three_dimensional,G08,False,,"['G01', 'G02', 'G03', 'G04', 'G05', 'G06', 'G07', 'G09', 'G10']",
+analysis_usd,three_dimensional,G09,False,,"['G01', 'G02', 'G03', 'G04', 'G05', 'G06', 'G07']",
+analysis_usd,three_dimensional,G10,False,,"['G01', 'G05', 'G06']",
+analysis_usd,three_dimensional,G11,False,,"['D01', 'D02', 'D08', 'D09', 'D11', 'D13']",
+analysis_usd,three_dimensional,G12,False,,"['G01', 'G03', 'G04', 'G05', 'G06', 'G10']",
+analysis_usd,three_dimensional,G13,False,,"['G01', 'G03', 'G04', 'G05', 'G06', 'G07', 'G10']",
+analysis_usd,three_dimensional,G14,False,,"['D01', 'D02', 'D05', 'D08', 'D09']",
+analysis_usd,three_dimensional,G15,False,,"['D01', 'D02', 'D05', 'D08', 'D09']",
+analysis_usd,three_dimensional,D01,True,,[],
+analysis_usd,three_dimensional,D02,True,,[],
+analysis_usd,three_dimensional,D03,False,,"['D05', 'D08', 'D09']",
+analysis_usd,three_dimensional,D04,False,,"['D01', 'D05', 'D08', 'D09']",
+analysis_usd,three_dimensional,D05,True,,[],
+analysis_usd,three_dimensional,D06,False,,"['D01', 'D02', 'D05', 'D08', 'D09']",
+analysis_usd,three_dimensional,D07,False,,"['D05', 'D08', 'D09', 'D13']",
+analysis_usd,three_dimensional,D08,True,,[],
+analysis_usd,three_dimensional,D09,True,,[],
+analysis_usd,three_dimensional,D10,False,,"['D01', 'D05', 'D07', 'D08', 'D09', 'D12', 'D13']",
+analysis_usd,three_dimensional,D11,True,,[],
+analysis_usd,three_dimensional,D12,False,,"['D05', 'D09']",
+analysis_usd,three_dimensional,D13,False,,"['D08', 'D09']",
+observed_accuracy_latency,observed_accuracy_latency,G01,True,,[],
+observed_accuracy_latency,observed_accuracy_latency,G02,False,,"['G01', 'G04']",
+observed_accuracy_latency,observed_accuracy_latency,G03,False,,['G01'],
+observed_accuracy_latency,observed_accuracy_latency,G04,True,,[],
+observed_accuracy_latency,observed_accuracy_latency,G05,False,,['G01'],
+observed_accuracy_latency,observed_accuracy_latency,G06,False,,['G01'],
+observed_accuracy_latency,observed_accuracy_latency,G07,False,,"['G01', 'G03', 'G04', 'G05', 'G06']",
+observed_accuracy_latency,observed_accuracy_latency,G08,False,,"['G01', 'G02', 'G03', 'G04', 'G05', 'G06', 'G07', 'G09', 'G10', 'G12']",
+observed_accuracy_latency,observed_accuracy_latency,G09,False,,"['G01', 'G02', 'G03', 'G04', 'G05', 'G06', 'G07', 'G10']",
+observed_accuracy_latency,observed_accuracy_latency,G10,False,,"['G01', 'G05', 'G06']",
+observed_accuracy_latency,observed_accuracy_latency,G11,False,,"['D01', 'D02', 'D08', 'D09', 'D11', 'D13']",
+observed_accuracy_latency,observed_accuracy_latency,G12,False,,"['G01', 'G03', 'G04', 'G05', 'G06', 'G10']",
+observed_accuracy_latency,observed_accuracy_latency,G13,False,,"['G01', 'G03', 'G04', 'G05', 'G06', 'G07', 'G10', 'G12']",
+observed_accuracy_latency,observed_accuracy_latency,G14,False,,"['D01', 'D02', 'D05', 'D06', 'D08', 'D09']",
+observed_accuracy_latency,observed_accuracy_latency,G15,False,,"['G04', 'D01', 'D02', 'D05', 'D08', 'D09']",
+observed_accuracy_latency,observed_accuracy_latency,D01,True,,[],
+observed_accuracy_latency,observed_accuracy_latency,D02,True,,[],
+observed_accuracy_latency,observed_accuracy_latency,D03,False,,"['G11', 'D01', 'D02', 'D05', 'D06', 'D07', 'D08', 'D09', 'D11', 'D13']",
+observed_accuracy_latency,observed_accuracy_latency,D04,False,,"['D01', 'D02', 'D05', 'D06', 'D08', 'D09']",
+observed_accuracy_latency,observed_accuracy_latency,D05,False,,"['D01', 'D02', 'D08', 'D09']",
+observed_accuracy_latency,observed_accuracy_latency,D06,False,,"['D01', 'D02', 'D05', 'D08', 'D09']",
+observed_accuracy_latency,observed_accuracy_latency,D07,False,,"['G11', 'D01', 'D02', 'D05', 'D06', 'D08', 'D09', 'D11', 'D13']",
+observed_accuracy_latency,observed_accuracy_latency,D08,False,,['D02'],
+observed_accuracy_latency,observed_accuracy_latency,D09,False,,"['D01', 'D02', 'D08']",
+observed_accuracy_latency,observed_accuracy_latency,D10,False,,"['G11', 'D01', 'D02', 'D05', 'D06', 'D07', 'D08', 'D09', 'D11', 'D12', 'D13']",
+observed_accuracy_latency,observed_accuracy_latency,D11,True,,[],
+observed_accuracy_latency,observed_accuracy_latency,D12,False,,"['G11', 'D01', 'D02', 'D05', 'D06', 'D07', 'D08', 'D09', 'D11', 'D13']",
+observed_accuracy_latency,observed_accuracy_latency,D13,False,,"['D01', 'D02', 'D08', 'D09']",

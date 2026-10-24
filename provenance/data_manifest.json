@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "type": "public_benchmark_data_manifest",
+  "source_result_sha256": "ca1458a83bde51062875a4d35e8e39098d34669028aa1c5e510cf9db41827d4f",
+  "files": {
+    "data/calls.jsonl.gz": "d8708e65fd6b25920f49291a37f05323e06b4f02a510ca42e13d7b1b506c6184",
+    "data/study.json": "b8e3e4b7d4f4f70815fcf75875875a601cbac90a9aaa66ab0cee73c0f65f9e62",
+    "data/outcomes.jsonl.gz": "4e4f775c0aafdb80f9189eb0d32022043e339ebec9a050ee055f48ea46f7a4c2",
+    "data/reference_results.json.gz": "49003cb67c1d2f179dd71f81a10df4de6e51f8e917066ca8b07c6e3b59ca77f9"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "source_notebook_sha256": "f2dae38da4def79b37932b0c8997bd6f0945cb13059284ad63532950ba00aacc",
+  "public_notebook_sha256": "caffc7ec502879e73d67b06b2bf67241397a89930825bf96d40634251986a9a0",
+  "changed_source_cells_zero_based": [
+    0,
+    1,
+    3,
+    5,
+    7,
+    23,
+    24
+  ],
+  "unchanged_scientific_display_and_figure_cells": [
+    6,
+    9,
+    11,
+    13,
+    14,
+    16,
+    18,
+    20,
+    22
+  ],
+  "changes": "Portable startup; structured-public reference loading; remove unused private compute setup; public export destination and provenance. All scientific display/figure cells and figure settings retained.",
+  "execution_status": "not_executed"
+}

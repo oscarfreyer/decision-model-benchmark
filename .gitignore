@@ -1,0 +1,15 @@
+# Local acquisition and generated runs
+.venv/
+.env
+.env.*
+*.pem
+*.key
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+preparation/input/
+preparation/output/
+benchmarking/output/
+analysis/output/
+data/reconstructed/

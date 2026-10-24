@@ -1,0 +1,131 @@
+{
+  "source_freeze_sha256": "fb68289d8ebd291d8560c9ebcee6096983d365045557f5d69e655a1495350bf9",
+  "source_execution_notebook_sha256": "91ba14d18e24795ceb85b9a4bd6dd893bd48737a6ae2750b0fa20d3a440f4250",
+  "source_export_manifest_sha256": "2f42bb628dff8e233d8a5ca7c33d5fea01c495bdf01beb633881e298e783dc37",
+  "source_figure_record_sha256": "9afc53092393c19fb7de0b21eb4eb611fdc15e805877e5470347fc4b7ed85aa7",
+  "source_result_sha256": "ca1458a83bde51062875a4d35e8e39098d34669028aa1c5e510cf9db41827d4f",
+  "source_font": {
+    "family": "Arial",
+    "file": "Arial.ttf",
+    "sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9",
+    "redistributed": false
+  },
+  "settings": {
+    "plot_version": "1.51",
+    "style_version": "1.1",
+    "font": "Arial",
+    "width_inches": 6.5,
+    "category_limit": 5,
+    "colors": {
+      "teal": "#5F828E",
+      "dark_teal": "#2E5661",
+      "orange": "#E6A052"
+    },
+    "confidence_colors": [
+      "#0072B2",
+      "#D55E00",
+      "#009E73",
+      "#CC79A7",
+      "#6F3C9F",
+      "#A6761D",
+      "#E31A1C",
+      "#008B8B",
+      "#556B2F",
+      "#377EB8",
+      "#B21869",
+      "#222222",
+      "#B8860B"
+    ],
+    "resource_marker_area": 75,
+    "resource_label_offsets": {},
+    "report_layout": "coauthor-20261021",
+    "revision_sizes": {
+      "combined": [
+        8.267716535433072,
+        11.692913385826772
+      ],
+      "combined_3d": [
+        10,
+        14
+      ],
+      "probability": [
+        7.2,
+        7.8
+      ],
+      "probability_main": [
+        8.267716535433072,
+        11.692913385826772
+      ],
+      "probability_multiples": [
+        7.2,
+        11.5
+      ],
+      "repeatability": [
+        7.2,
+        7.6
+      ]
+    },
+    "figure1_fontsize": 9.5,
+    "figure1_label_fontsize": 9,
+    "figure1_schematic_fontsize": 9.5,
+    "resource_full_frontier_names": false,
+    "main_fontsize": 11,
+    "main_tick_fontsize": 10,
+    "main_panel_fontsize": 13,
+    "revision_fontsize": 9,
+    "revision_label_fontsize": 8,
+    "revision_legend_columns": 2,
+    "revision_auroc_in_legend": false,
+    "revision_3d_view": [
+      35,
+      -135
+    ],
+    "rc_params": {
+      "axes.formatter.use_locale": false,
+      "font.size": 9,
+      "figure.dpi": 180,
+      "figure.facecolor": "white",
+      "axes.facecolor": "white",
+      "axes.edgecolor": "#404040",
+      "axes.linewidth": 0.6,
+      "axes.spines.top": false,
+      "axes.spines.right": false,
+      "axes.axisbelow": true,
+      "grid.color": "#DDDDDD",
+      "grid.linewidth": 0.6,
+      "lines.linewidth": 0.9,
+      "patch.edgecolor": "#404040",
+      "patch.linewidth": 0.6,
+      "legend.fontsize": 8,
+      "legend.fancybox": false,
+      "legend.framealpha": 1.0,
+      "legend.edgecolor": "#404040",
+      "xtick.direction": "out",
+      "ytick.direction": "out",
+      "xtick.major.width": 0.6,
+      "ytick.major.width": 0.6,
+      "svg.fonttype": "none",
+      "svg.hashsalt": "jev-analysis-figures-v1"
+    }
+  },
+  "expected_main_pngs": {
+    "combined_candidate_a": {
+      "png_file": "Figure_1_Study_Accuracy_Resources.png",
+      "png_sha256": "50666beeb9e6253a96493b7f3c9def0d3d2ad2cb4d69d3ee9b535eaaeacbdad3",
+      "plot_payload_sha256": "8afc19dee419ce8a19e720670da90cb73a8e469d3fcc4f0b2a291c44a7ed070f"
+    },
+    "probability_roc_calibration": {
+      "png_file": "Figure_3_Discrimination_Calibration.png",
+      "png_sha256": "925ff8f61627a00c4203b642b51b393d07340ca2dd62784d20f81032e85b2cd0",
+      "plot_payload_sha256": "d3e149bac07a5bb30d29237b99a34701520753b5891c93ce41ffe4ca64fe4584"
+    },
+    "probability_errors": {
+      "png_file": "Figure_2_Selective_Error_Rates.png",
+      "png_sha256": "ec7996888e78e82e2607a75d26c7d472e630e481d230197d2fc42e28203554c9",
+      "plot_payload_sha256": "ac1399f9608f8cf0b378328f21eebe8eb3c382bba7828b5f9f2febe12f634851"
+    }
+  },
+  "numerical_release": "SAP v1.8",
+  "presentation_version": "1.51",
+  "source_environment_sha256": "abdf39756b775bfaea8b08a74f32c2b8b7ece49626c0c5543cc3439599da3c84"
+}

@@ -1,0 +1,614 @@
+schema_version = 2
+protocol_version = "2.2"
+protocol_project = "prj-202610-jev-medqa"
+# Only accepted components: D-01a, D-03/04/05a/05b/07a, confidence measures and defect direction.
+accepted_decisions = ["D-01a", "D-03", "D-04", "D-05a", "D-05b", "D-07a", "D-10"]
+model_roster = ["C01","C02","C03","C04","C05","C06","C07","C08","C09","C10","C11","C12","C13","C14","C15","C16","C17","C18","C19","C20","C21","C22","C23","C24","J01"]
+
+[prompt]
+text = """Answer the medical multiple-choice question. Select exactly one supplied label. Return only a final JSON object with exactly one field: {"answer": "A"}. Use the selected label in place of A.
+
+Question:
+{stem}
+
+Options:
+{options}
+"""
+
+[benchmark]
+id = "medqa"
+expected_evaluation_items = 1273
+closed_book = true
+
+[execution]
+study_registry = "benchmarking/output/studies"
+# Pending exact values are empty; preview/mock works, live fails closed.
+timeout_seconds = ""
+concurrency = ""
+schedule = ""
+seed = ""
+max_attempts = 1
+retries = false
+fallbacks = false
+total_generated_token_allowance = 16384
+
+[budget]
+currency = "USD"
+spend_cap_usd = ""
+stop_threshold_usd = ""
+reservation_per_request_usd = ""
+
+# D-10 scope contains public digests only; live verification uses these ten items.
+[development_validation]
+purpose = "ten_question_live_verification"
+questions_sha256 = "6602546ead21c0bec20c34ad3b63fbd134dce06028a956ec6c94b8872cf92b6b"
+keys_sha256 = "3d00ded1b379b9a95639da837c55688c3ac58f198d23ab5342ee54b259d85651"
+preparation_manifest_sha256 = "02c277f7b46797f1a7c999686105583f7fcee671836675a1b5114b00e206013e"
+
+[analysis]
+accuracy_ci = "wilson"
+paired_difference_ci = "paired_percentile_bootstrap"
+pairwise_test = "exact_mcnemar"
+multiplicity = "holm"
+s1_count = 24
+s2_count = 10
+confidence_bins = 10
+high_confidence_threshold = 0.90
+probability_sum_tolerance = "0.02"
+normalization = "pending"
+
+[freeze]
+manifest = ""
+human_review_record = ""
+
+[models.C01]
+display_name = "GPT-6 Astra Low"
+model_id = "openai/gpt-6-astra"
+base_model = "openai/gpt-6-astra"
+effort = "low"
+pair_id = "P01"
+adapter = "openrouter"
+proposed_route = "OpenAI Standard"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C01.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C02]
+display_name = "GPT-6 Astra High"
+model_id = "openai/gpt-6-astra"
+base_model = "openai/gpt-6-astra"
+effort = "high"
+pair_id = "P01"
+adapter = "openrouter"
+proposed_route = "OpenAI Standard"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C02.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C03]
+display_name = "GPT-6.1 Sol Low"
+model_id = "openai/gpt-6.1-sol"
+base_model = "openai/gpt-6.1-sol"
+effort = "low"
+pair_id = "P02"
+adapter = "openrouter"
+proposed_route = "OpenAI Standard"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C03.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C04]
+display_name = "GPT-6.1 Sol High"
+model_id = "openai/gpt-6.1-sol"
+base_model = "openai/gpt-6.1-sol"
+effort = "high"
+pair_id = "P02"
+adapter = "openrouter"
+proposed_route = "OpenAI Standard"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C04.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C05]
+display_name = "GPT-6 Luna Low"
+model_id = "openai/gpt-6-luna"
+base_model = "openai/gpt-6-luna"
+effort = "low"
+pair_id = "P03"
+adapter = "openrouter"
+proposed_route = "OpenAI Standard"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C05.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C06]
+display_name = "GPT-6 Luna High"
+model_id = "openai/gpt-6-luna"
+base_model = "openai/gpt-6-luna"
+effort = "high"
+pair_id = "P03"
+adapter = "openrouter"
+proposed_route = "OpenAI Standard"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C06.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C07]
+display_name = "Claude Opus 5.5 Low"
+model_id = "anthropic/claude-opus-5.5"
+base_model = "anthropic/claude-opus-5.5"
+effort = "low"
+pair_id = "P04"
+adapter = "openrouter"
+proposed_route = "Amazon Bedrock Standard, endpoint/region pending"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C07.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C08]
+display_name = "Claude Opus 5.5 High"
+model_id = "anthropic/claude-opus-5.5"
+base_model = "anthropic/claude-opus-5.5"
+effort = "high"
+pair_id = "P04"
+adapter = "openrouter"
+proposed_route = "Same Bedrock endpoint"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C08.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C09]
+display_name = "Claude Sonnet 5.5 Low"
+model_id = "anthropic/claude-sonnet-5.5"
+base_model = "anthropic/claude-sonnet-5.5"
+effort = "low"
+pair_id = "P05"
+adapter = "openrouter"
+proposed_route = "Anthropic Standard"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C09.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C10]
+display_name = "Claude Sonnet 5.5 High"
+model_id = "anthropic/claude-sonnet-5.5"
+base_model = "anthropic/claude-sonnet-5.5"
+effort = "high"
+pair_id = "P05"
+adapter = "openrouter"
+proposed_route = "Anthropic Standard"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C10.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C11]
+display_name = "Gemini 3.8 Flash Low"
+model_id = "google/gemini-3.8-flash"
+base_model = "google/gemini-3.8-flash"
+effort = "low"
+pair_id = "P06"
+adapter = "openrouter"
+proposed_route = "Google AI Studio Standard"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C11.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C12]
+display_name = "Gemini 3.8 Flash High"
+model_id = "google/gemini-3.8-flash"
+base_model = "google/gemini-3.8-flash"
+effort = "high"
+pair_id = "P06"
+adapter = "openrouter"
+proposed_route = "Same Google endpoint"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C12.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C13]
+display_name = "DeepSeek V4.1 Flash Low"
+model_id = "deepseek/deepseek-v4.1-flash"
+base_model = "deepseek/deepseek-v4.1-flash"
+effort = "low"
+pair_id = "P07"
+adapter = "openrouter"
+proposed_route = "inference.net, controls/schema pending"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C13.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C14]
+display_name = "DeepSeek V4.1 Flash High"
+model_id = "deepseek/deepseek-v4.1-flash"
+base_model = "deepseek/deepseek-v4.1-flash"
+effort = "high"
+pair_id = "P07"
+adapter = "openrouter"
+proposed_route = "Same inference.net endpoint"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C14.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C15]
+display_name = "Qwen3.8 Max Low"
+model_id = "qwen/qwen3.8-max-0902"
+base_model = "qwen/qwen3.8-max-0902"
+effort = "low"
+pair_id = "P08"
+adapter = "openrouter"
+proposed_route = "Alibaba, forwarding pending"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C15.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C16]
+display_name = "Qwen3.8 Max High"
+model_id = "qwen/qwen3.8-max-0902"
+base_model = "qwen/qwen3.8-max-0902"
+effort = "high"
+pair_id = "P08"
+adapter = "openrouter"
+proposed_route = "Alibaba, forwarding pending"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C16.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C17]
+display_name = "Qwen3.8-27B Low"
+model_id = "qwen/qwen3.8-27b"
+base_model = "qwen/qwen3.8-27b"
+effort = "low"
+pair_id = "P09"
+adapter = "openrouter"
+proposed_route = "Mancer, native Low/High forwarding pending"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C17.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C18]
+display_name = "Qwen3.8-27B High"
+model_id = "qwen/qwen3.8-27b"
+base_model = "qwen/qwen3.8-27b"
+effort = "high"
+pair_id = "P09"
+adapter = "openrouter"
+proposed_route = "Same Mancer endpoint, pending"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C18.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C19]
+display_name = "Mistral Medium 3.5 Low"
+model_id = "mistralai/mistral-medium-3-5"
+base_model = "mistralai/mistral-medium-3-5"
+effort = "low"
+pair_id = "P10"
+adapter = "openrouter"
+proposed_route = "Mistral Standard, exact endpoint pending"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C19.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C20]
+display_name = "Mistral Medium 3.5 High"
+model_id = "mistralai/mistral-medium-3-5"
+base_model = "mistralai/mistral-medium-3-5"
+effort = "high"
+pair_id = "P10"
+adapter = "openrouter"
+proposed_route = "Same Mistral endpoint"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C20.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C21]
+display_name = "Mistral Large 3 Standard"
+model_id = "mistralai/mistral-large-2512"
+base_model = "mistralai/mistral-large-2512"
+effort = "standard"
+pair_id = ""
+adapter = "openrouter"
+proposed_route = "Mistral Standard, exact endpoint pending"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C21.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C22]
+display_name = "GLM-5 Standard/native"
+model_id = "z-ai/glm-5"
+base_model = "z-ai/glm-5"
+effort = "native"
+pair_id = ""
+adapter = "openrouter"
+proposed_route = "Baidu FP8, schema/native behavior pending"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C22.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C23]
+display_name = "Kimi K2.5 Standard/native"
+model_id = "moonshotai/kimi-k2.5"
+base_model = "moonshotai/kimi-k2.5"
+effort = "native"
+pair_id = ""
+adapter = "openrouter"
+proposed_route = "SiliconFlow price scenario, endpoint verification pending"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C23.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.C24]
+display_name = "Llama 4 Maverick Standard"
+model_id = "meta-llama/llama-4-maverick"
+base_model = "meta-llama/llama-4-maverick"
+effort = "standard"
+pair_id = ""
+adapter = "openrouter"
+proposed_route = "DigitalOcean, exact endpoint pending"
+# Exact operational identities/controls pending endpoint verification.
+route = ""
+version = ""
+region = ""
+endpoint = ""
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.C24.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.
+
+[models.J01]
+display_name = "JEV 1.13"
+model_id = "typesafe/jev-1.13"
+base_model = "typesafe/jev-1.13"
+effort = "native"
+pair_id = ""
+adapter = "jev_gateway"
+proposed_route = "TypeSafe via OpenRouter Decisions, selected by Oscar 2026-10-05"
+# Public documentation identifies this route/snapshot; live verification is pending.
+# Routing uses the slug; response validation checks the provider display name.
+provider_slug = "typesafe"
+route = "TypeSafe"
+version = "typesafe/jev-1.13-20260917"
+region = ""
+endpoint = "https://openrouter.ai/api/alpha/decisions"
+control_evidence = ""
+control_evidence_sha256 = ""
+probability_semantics = "unverified"
+concentration_semantics = "unverified"
+output_accounting = ""
+reasoning_in_output = ""
+[models.J01.request_settings]
+# Reviewed endpoint-specific payload controls, not speculative defaults.

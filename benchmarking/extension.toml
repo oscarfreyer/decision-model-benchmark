@@ -1,0 +1,445 @@
+# AW-179 collection configuration. Development receipts reviewed 2026-10-11.
+schema_version = 6
+execution_workflow = "decision-extension-v1"
+config_namespace = "model-ids-20261011"
+protocol_version = "2.7"
+campaign = "Decision model extension"
+model_roster = ["D03", "D04", "D05", "D06", "D07", "D08", "D09", "D10", "D11", "D12", "D13"]
+prompt = """Answer the medical multiple-choice question. Select exactly one supplied label.
+
+Question:
+{stem}
+
+Options:
+{options}
+"""
+
+[execution]
+concurrency = 10
+provider_concurrency = 10
+timeout_seconds = 600
+seed = 20261006
+max_retries = 10
+rate_limit_stop_after = 3
+# Oscar, 2026-10-11: five seconds per provider, shared across its models.
+pacing_confirmed = true
+min_interval_seconds = 5.0
+registry = "benchmarking/output/extension-registry"
+
+[models.D03]
+display_name = "Kev 4B"
+model_id = "jaredpalmer/kev-4b"
+base_model = "jaredpalmer/kev-4b"
+effort = "native"
+pair_id = ""
+adapter = "native_decision_gateway"
+surface = "systemone"
+endpoint = "https://openrouter.ai/api/v1/systemone"
+response_schema = "openrouter-native-choice-v1"
+route = "SiliconFlow"
+provider_slug = "siliconflow/fp8"
+# Candidate expectation from endpoint name, not an observed response identity.
+expected_returned_model = "jaredpalmer/kev-4b-20260924"
+advertised_backend = "jaredpalmer/kev-4b-20260924"
+backend_version_status = "unavailable"
+region = "unavailable"
+catalog_context_tokens = 8192
+metadata_url = "https://openrouter.ai/api/v1/models/jaredpalmer/kev-4b/endpoints"
+metadata_accessed = "2026-10-11"
+output_accounting = "provider_native_counters_unverified"
+[models.D03.request_settings]
+[models.D03.probability_semantics]
+reviewed = false
+meaning = "unreviewed"
+evidence = ""
+[models.D03.scalar_semantics]
+"answers.answer.confidence" = "unreviewed"
+[models.D03.verification]
+route = true
+controls = true
+schema = true
+full_input = true
+development_receipt = "benchmarking/output/extension-dev-D03-v01"
+development_receipt_sha256 = "f85d275b1c40b9ac6772478d6f37d647bad5d6845fc7614e6697884542f6a6c9"
+input_audit = "" # Optional detailed tokenizer audit; checked when supplied.
+notes = "Development receipt reviewed: requested controls and full payload preserved; returned identity and native schema match. Effective-controls response field unavailable."
+
+[models.D04]
+display_name = "Solar Decide"
+model_id = "upstage/solar-decide"
+base_model = "upstage/solar-decide"
+effort = "native"
+pair_id = ""
+adapter = "native_decision_gateway"
+surface = "systemone"
+endpoint = "https://openrouter.ai/api/v1/systemone"
+response_schema = "openrouter-native-choice-v1"
+route = "Upstage"
+provider_slug = "upstage"
+# Candidate expectation from endpoint name, not an observed response identity.
+expected_returned_model = "upstage/solar-decide-20260928"
+advertised_backend = "upstage/solar-decide-20260928"
+backend_version_status = "unavailable"
+region = "unavailable"
+catalog_context_tokens = 524288
+metadata_url = "https://openrouter.ai/api/v1/models/upstage/solar-decide/endpoints"
+metadata_accessed = "2026-10-11"
+output_accounting = "provider_native_counters_unverified"
+[models.D04.request_settings]
+[models.D04.probability_semantics]
+reviewed = false
+meaning = "unreviewed"
+evidence = ""
+[models.D04.scalar_semantics]
+"answers.answer.confidence" = "unreviewed"
+[models.D04.verification]
+route = true
+controls = true
+schema = true
+full_input = true
+development_receipt = "benchmarking/output/extension-dev-D04-D13-v01"
+development_receipt_sha256 = "b422904578177134cbc456595f7c14889fa956f297050a4e2446069e8c2fe387"
+input_audit = "" # Optional detailed tokenizer audit; checked when supplied.
+notes = "Development receipt reviewed: requested controls and full payload preserved; returned identity and native schema match. Effective-controls response field unavailable."
+
+[models.D05]
+display_name = "Mercury Decide"
+model_id = "inception/mercury-decide"
+base_model = "inception/mercury-decide"
+effort = "native"
+pair_id = ""
+adapter = "native_decision_gateway"
+surface = "systemone"
+endpoint = "https://openrouter.ai/api/v1/systemone"
+response_schema = "openrouter-native-choice-v1"
+route = "Inception"
+provider_slug = "inception"
+# Candidate expectation from endpoint name, not an observed response identity.
+expected_returned_model = "inception/mercury-decide-20260930"
+advertised_backend = "inception/mercury-decide-20260930"
+backend_version_status = "unavailable"
+region = "unavailable"
+catalog_context_tokens = 65536
+metadata_url = "https://openrouter.ai/api/v1/models/inception/mercury-decide/endpoints"
+metadata_accessed = "2026-10-11"
+output_accounting = "provider_native_counters_unverified"
+[models.D05.request_settings]
+[models.D05.probability_semantics]
+reviewed = false
+meaning = "unreviewed"
+evidence = ""
+[models.D05.scalar_semantics]
+"answers.answer.confidence" = "unreviewed"
+[models.D05.verification]
+route = true
+controls = true
+schema = true
+full_input = true
+development_receipt = "benchmarking/output/extension-dev-D04-D13-v01"
+development_receipt_sha256 = "b422904578177134cbc456595f7c14889fa956f297050a4e2446069e8c2fe387"
+input_audit = "" # Optional detailed tokenizer audit; checked when supplied.
+notes = "Development receipt reviewed: requested controls and full payload preserved; returned identity and native schema match. Effective-controls response field unavailable."
+
+[models.D06]
+display_name = "Clef"
+model_id = "cloudflare/clef"
+base_model = "cloudflare/clef"
+effort = "native"
+pair_id = ""
+adapter = "native_decision_gateway"
+surface = "systemone"
+endpoint = "https://openrouter.ai/api/v1/systemone"
+response_schema = "openrouter-native-choice-v1"
+route = "Cloudflare"
+provider_slug = "cloudflare"
+# Candidate expectation from endpoint name, not an observed response identity.
+expected_returned_model = "cloudflare/clef"
+advertised_backend = "cloudflare/clef"
+backend_version_status = "unavailable"
+region = "unavailable"
+catalog_context_tokens = 65536
+metadata_url = "https://openrouter.ai/api/v1/models/cloudflare/clef/endpoints"
+metadata_accessed = "2026-10-11"
+output_accounting = "provider_native_counters_unverified"
+[models.D06.request_settings]
+[models.D06.probability_semantics]
+reviewed = false
+meaning = "unreviewed"
+evidence = ""
+[models.D06.scalar_semantics]
+"answers.answer.confidence" = "unreviewed"
+[models.D06.verification]
+route = true
+controls = true
+schema = true
+full_input = true
+development_receipt = "benchmarking/output/extension-dev-D04-D13-v01"
+development_receipt_sha256 = "b422904578177134cbc456595f7c14889fa956f297050a4e2446069e8c2fe387"
+input_audit = "" # Optional detailed tokenizer audit; checked when supplied.
+notes = "Development receipt reviewed: requested controls and full payload preserved; returned identity and native schema match. Effective-controls response field unavailable."
+
+[models.D07]
+display_name = "Clef Flash"
+model_id = "cloudflare/clef-flash"
+base_model = "cloudflare/clef-flash"
+effort = "native"
+pair_id = ""
+adapter = "native_decision_gateway"
+surface = "systemone"
+endpoint = "https://openrouter.ai/api/v1/systemone"
+response_schema = "openrouter-native-choice-v1"
+route = "Cloudflare"
+provider_slug = "cloudflare"
+# Candidate expectation from endpoint name, not an observed response identity.
+expected_returned_model = "cloudflare/clef-flash"
+advertised_backend = "cloudflare/clef-flash"
+backend_version_status = "unavailable"
+region = "unavailable"
+catalog_context_tokens = 65536
+metadata_url = "https://openrouter.ai/api/v1/models/cloudflare/clef-flash/endpoints"
+metadata_accessed = "2026-10-11"
+output_accounting = "provider_native_counters_unverified"
+[models.D07.request_settings]
+[models.D07.probability_semantics]
+reviewed = false
+meaning = "unreviewed"
+evidence = ""
+[models.D07.scalar_semantics]
+"answers.answer.confidence" = "unreviewed"
+[models.D07.verification]
+route = true
+controls = true
+schema = true
+full_input = true
+development_receipt = "benchmarking/output/extension-dev-D04-D13-v01"
+development_receipt_sha256 = "b422904578177134cbc456595f7c14889fa956f297050a4e2446069e8c2fe387"
+input_audit = "" # Optional detailed tokenizer audit; checked when supplied.
+notes = "Development receipt reviewed: requested controls and full payload preserved; returned identity and native schema match. Effective-controls response field unavailable."
+
+[models.D08]
+display_name = "Liquid d1"
+model_id = "liquid/d1"
+base_model = "liquid/d1"
+effort = "native"
+pair_id = ""
+adapter = "native_decision_gateway"
+surface = "systemone"
+endpoint = "https://openrouter.ai/api/v1/systemone"
+response_schema = "openrouter-native-choice-v1"
+route = "Liquid"
+provider_slug = "liquid"
+# Candidate expectation from endpoint name, not an observed response identity.
+expected_returned_model = "liquid/d1-20260930"
+advertised_backend = "liquid/d1-20260930"
+backend_version_status = "unavailable"
+region = "unavailable"
+catalog_context_tokens = 65536
+metadata_url = "https://openrouter.ai/api/v1/models/liquid/d1/endpoints"
+metadata_accessed = "2026-10-11"
+output_accounting = "provider_native_counters_unverified"
+[models.D08.request_settings]
+[models.D08.probability_semantics]
+reviewed = false
+meaning = "unreviewed"
+evidence = ""
+[models.D08.scalar_semantics]
+"answers.answer.confidence" = "unreviewed"
+[models.D08.verification]
+route = true
+controls = true
+schema = true
+full_input = true
+development_receipt = "benchmarking/output/extension-dev-D04-D13-v01"
+development_receipt_sha256 = "b422904578177134cbc456595f7c14889fa956f297050a4e2446069e8c2fe387"
+input_audit = "" # Optional detailed tokenizer audit; checked when supplied.
+notes = "Development receipt reviewed: requested controls and full payload preserved; returned identity and native schema match. Effective-controls response field unavailable."
+
+[models.D09]
+display_name = "Decider V1.1 27B"
+model_id = "perplexity/pplx-decider-v1.1-27b"
+base_model = "perplexity/pplx-decider-v1.1-27b"
+effort = "native"
+pair_id = ""
+adapter = "native_decision_gateway"
+surface = "systemone"
+endpoint = "https://openrouter.ai/api/v1/systemone"
+response_schema = "openrouter-native-choice-v1"
+route = "Perplexity"
+provider_slug = "perplexity"
+# Candidate expectation from endpoint name, not an observed response identity.
+expected_returned_model = "perplexity/pplx-decider-v1.1-27b-20261006"
+advertised_backend = "perplexity/pplx-decider-v1.1-27b-20261006"
+backend_version_status = "unavailable"
+region = "unavailable"
+catalog_context_tokens = 262144
+metadata_url = "https://openrouter.ai/api/v1/models/perplexity/pplx-decider-v1.1-27b/endpoints"
+metadata_accessed = "2026-10-11"
+output_accounting = "provider_native_counters_unverified"
+[models.D09.request_settings]
+[models.D09.probability_semantics]
+reviewed = false
+meaning = "unreviewed"
+evidence = ""
+[models.D09.scalar_semantics]
+"answers.answer.confidence" = "unreviewed"
+[models.D09.verification]
+route = true
+controls = true
+schema = true
+full_input = true
+development_receipt = "benchmarking/output/extension-dev-D04-D13-v01"
+development_receipt_sha256 = "b422904578177134cbc456595f7c14889fa956f297050a4e2446069e8c2fe387"
+input_audit = "" # Optional detailed tokenizer audit; checked when supplied.
+notes = "Development receipt reviewed: requested controls and full payload preserved; returned identity and native schema match. Effective-controls response field unavailable."
+
+[models.D10]
+display_name = "Solar Decide Flash"
+model_id = "upstage/solar-decide-flash"
+base_model = "upstage/solar-decide-flash"
+effort = "native"
+pair_id = ""
+adapter = "native_decision_gateway"
+surface = "systemone"
+endpoint = "https://openrouter.ai/api/v1/systemone"
+response_schema = "openrouter-native-choice-v1"
+route = "Upstage"
+provider_slug = "upstage"
+# Candidate expectation from endpoint name, not an observed response identity.
+expected_returned_model = "upstage/solar-decide-flash-20261008"
+advertised_backend = "upstage/solar-decide-flash-20261008"
+backend_version_status = "unavailable"
+region = "unavailable"
+catalog_context_tokens = 524288
+metadata_url = "https://openrouter.ai/api/v1/models/upstage/solar-decide-flash/endpoints"
+metadata_accessed = "2026-10-11"
+output_accounting = "provider_native_counters_unverified"
+[models.D10.request_settings]
+[models.D10.probability_semantics]
+reviewed = false
+meaning = "unreviewed"
+evidence = ""
+[models.D10.scalar_semantics]
+"answers.answer.confidence" = "unreviewed"
+[models.D10.verification]
+route = true
+controls = true
+schema = true
+full_input = true
+development_receipt = "benchmarking/output/extension-dev-D04-D13-v01"
+development_receipt_sha256 = "b422904578177134cbc456595f7c14889fa956f297050a4e2446069e8c2fe387"
+input_audit = "" # Optional detailed tokenizer audit; checked when supplied.
+notes = "Development receipt reviewed: requested controls and full payload preserved; returned identity and native schema match. Effective-controls response field unavailable."
+
+[models.D11]
+display_name = "Clef Omni"
+model_id = "cloudflare/clef-omni"
+base_model = "cloudflare/clef-omni"
+effort = "native"
+pair_id = ""
+adapter = "native_decision_gateway"
+surface = "systemone"
+endpoint = "https://openrouter.ai/api/v1/systemone"
+response_schema = "openrouter-native-choice-v1"
+route = "Cloudflare"
+provider_slug = "cloudflare"
+# Candidate expectation from endpoint name, not an observed response identity.
+expected_returned_model = "cloudflare/clef-omni-20261009"
+advertised_backend = "cloudflare/clef-omni-20261009"
+backend_version_status = "unavailable"
+region = "unavailable"
+catalog_context_tokens = 65536
+metadata_url = "https://openrouter.ai/api/v1/models/cloudflare/clef-omni/endpoints"
+metadata_accessed = "2026-10-11"
+output_accounting = "provider_native_counters_unverified"
+[models.D11.request_settings]
+[models.D11.probability_semantics]
+reviewed = false
+meaning = "unreviewed"
+evidence = ""
+[models.D11.scalar_semantics]
+"answers.answer.confidence" = "unreviewed"
+[models.D11.verification]
+route = true
+controls = true
+schema = true
+full_input = true
+development_receipt = "benchmarking/output/extension-dev-D04-D13-v01"
+development_receipt_sha256 = "b422904578177134cbc456595f7c14889fa956f297050a4e2446069e8c2fe387"
+input_audit = "" # Optional detailed tokenizer audit; checked when supplied.
+notes = "Development receipt reviewed: requested controls and full payload preserved; returned identity and native schema match. Effective-controls response field unavailable."
+
+[models.D12]
+display_name = "Drex v1.5"
+model_id = "nace-ai/drex-v1.5"
+base_model = "nace-ai/drex-v1.5"
+effort = "native"
+pair_id = ""
+adapter = "native_decision_gateway"
+surface = "systemone"
+endpoint = "https://openrouter.ai/api/v1/systemone"
+response_schema = "openrouter-native-choice-v1"
+route = "DeepInfra"
+provider_slug = "deepinfra"
+# Candidate expectation from endpoint name, not an observed response identity.
+expected_returned_model = "nace-ai/drex-v1.5-20261009"
+advertised_backend = "nace-ai/drex-v1.5-20261009"
+backend_version_status = "unavailable"
+region = "unavailable"
+catalog_context_tokens = 131072
+metadata_url = "https://openrouter.ai/api/v1/models/nace-ai/drex-v1.5/endpoints"
+metadata_accessed = "2026-10-11"
+output_accounting = "provider_native_counters_unverified"
+[models.D12.request_settings]
+[models.D12.probability_semantics]
+reviewed = false
+meaning = "unreviewed"
+evidence = ""
+[models.D12.scalar_semantics]
+"answers.answer.confidence" = "unreviewed"
+[models.D12.verification]
+route = true
+controls = true
+schema = true
+full_input = true
+development_receipt = "benchmarking/output/extension-dev-D04-D13-v01"
+development_receipt_sha256 = "b422904578177134cbc456595f7c14889fa956f297050a4e2446069e8c2fe387"
+input_audit = "" # Optional detailed tokenizer audit; checked when supplied.
+notes = "Development receipt reviewed: requested controls and full payload preserved; returned identity and native schema match. Effective-controls response field unavailable."
+
+[models.D13]
+display_name = "Microsoft-Decision-1"
+model_id = "microsoft/microsoft-decision-1"
+base_model = "microsoft/microsoft-decision-1"
+effort = "native"
+pair_id = ""
+adapter = "native_decision_gateway"
+surface = "systemone"
+endpoint = "https://openrouter.ai/api/v1/systemone"
+response_schema = "openrouter-native-choice-v1"
+route = "Azure"
+provider_slug = "azure"
+# Candidate expectation from endpoint name, not an observed response identity.
+expected_returned_model = "microsoft/microsoft-decision-1-20261009"
+advertised_backend = "microsoft/microsoft-decision-1-20261009"
+backend_version_status = "unavailable"
+region = "unavailable"
+catalog_context_tokens = 32768
+metadata_url = "https://openrouter.ai/api/v1/models/microsoft/microsoft-decision-1/endpoints"
+metadata_accessed = "2026-10-11"
+output_accounting = "provider_native_counters_unverified"
+[models.D13.request_settings]
+[models.D13.probability_semantics]
+reviewed = false
+meaning = "unreviewed"
+evidence = ""
+[models.D13.scalar_semantics]
+"answers.answer.confidence" = "unreviewed"
+[models.D13.verification]
+route = true
+controls = true
+schema = true
+full_input = true
+development_receipt = "benchmarking/output/extension-dev-D04-D13-v01"
+development_receipt_sha256 = "b422904578177134cbc456595f7c14889fa956f297050a4e2446069e8c2fe387"
+input_audit = "" # Optional detailed tokenizer audit; checked when supplied.
+notes = "Development receipt reviewed: requested controls and full payload preserved; returned identity and native schema match. Effective-controls response field unavailable."

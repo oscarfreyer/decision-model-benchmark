@@ -1,0 +1,266 @@
+[
+  {
+    "source_file": "answers.csv",
+    "source_sha256": "4e780020d54c2e1b3b8db044d28aa98879990de5e7dee2e4821e975066990ce9",
+    "action": "omitted",
+    "reason": "Separate answer/reference-key table omitted; public outcome labels and correctness can reveal reference answers"
+  },
+  {
+    "source_file": "combined_candidate_a.pdf",
+    "source_sha256": "ebaebeef0471d6d2c5260122f0a130848aee75f99cd63ef1cb850b2ed20f32db",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/combined_candidate_a.pdf"
+  },
+  {
+    "source_file": "combined_candidate_a.png",
+    "source_sha256": "50666beeb9e6253a96493b7f3c9def0d3d2ad2cb4d69d3ee9b535eaaeacbdad3",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/combined_candidate_a.png"
+  },
+  {
+    "source_file": "combined_candidate_a.svg",
+    "source_sha256": "b29765bd7a2e45e644ddffadb650ed5eefc1ceb165d61a17b6ce07f72aa66833",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/combined_candidate_a.svg"
+  },
+  {
+    "source_file": "complete_valid.csv",
+    "source_sha256": "6a8eac0abf568a4e073bf9394f074c138b12c47724f338ea77fbbeca2e4e58a2",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/complete_valid.csv"
+  },
+  {
+    "source_file": "confidence.csv",
+    "source_sha256": "1c6967b11d4ff83bc6c0c6fe77babe6acee70495ffa80ca6d14bfe269dbd745a",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/confidence.csv"
+  },
+  {
+    "source_file": "export_manifest.json",
+    "source_sha256": "2f42bb628dff8e233d8a5ca7c33d5fea01c495bdf01beb633881e298e783dc37",
+    "action": "omitted",
+    "reason": "replaced by public manifest"
+  },
+  {
+    "source_file": "figure_record.json",
+    "source_sha256": "9afc53092393c19fb7de0b21eb4eb611fdc15e805877e5470347fc4b7ed85aa7",
+    "action": "omitted",
+    "reason": "replaced by public presentation provenance"
+  },
+  {
+    "source_file": "first_attempt.csv",
+    "source_sha256": "070c23c3e0fcca474d94c7aecf6d8b4ca7f524ef90fcfbd01a30f3cf88f8c106",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/first_attempt.csv"
+  },
+  {
+    "source_file": "frontiers.csv",
+    "source_sha256": "661ba21111396f8aea5b80d579022142f2eb73a8b93b9172b503c2237516947f",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/frontiers.csv"
+  },
+  {
+    "source_file": "paired.csv",
+    "source_sha256": "0868c89f247b73c895f5c8e7866a1485b5cfb06d7958337924d721085d897ec1",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/paired.csv"
+  },
+  {
+    "source_file": "primary.csv",
+    "source_sha256": "f9430c42aad78df12c05d6e5602fbf3fcb70b6b9b290ef77fce80ef72fbc1f5b",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/primary.csv"
+  },
+  {
+    "source_file": "probability_calibration.pdf",
+    "source_sha256": "39f00ab6b8ba8fa5042683c0f096078b000cce160f2acf820cff7598c595dc10",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_calibration.pdf"
+  },
+  {
+    "source_file": "probability_calibration.png",
+    "source_sha256": "b1b129e1d30b48cc3789c2e28201591c04826ea0b9524d864d6864a0211a9630",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_calibration.png"
+  },
+  {
+    "source_file": "probability_calibration.svg",
+    "source_sha256": "6e07109be1544266c0db7aab17337cb08a53fd581dbdc64e017b94d4bb86ce43",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_calibration.svg"
+  },
+  {
+    "source_file": "probability_coverage.pdf",
+    "source_sha256": "3f6bacce05bd6a6b5700c78115430234e5ff07a4adc9d69b80b2d07402d245f7",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_coverage.pdf"
+  },
+  {
+    "source_file": "probability_coverage.png",
+    "source_sha256": "9ea4ad6473b183391d5349ac3f072682a5ea24c4a986dc6fc13b543d2ff10c27",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_coverage.png"
+  },
+  {
+    "source_file": "probability_coverage.svg",
+    "source_sha256": "43fd899ac5383cb679ff4b43944ee20c62680d41bc3197d663df3fb36408d004",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_coverage.svg"
+  },
+  {
+    "source_file": "probability_cutoff_supplement.pdf",
+    "source_sha256": "9f98e0394047b938bda5454c0025a255ce9d76a6d2a5fe2c852e9e10c84b8b88",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_cutoff_supplement.pdf"
+  },
+  {
+    "source_file": "probability_cutoff_supplement.png",
+    "source_sha256": "7f42fc40d40f6af1b7a467ba1df9d2416324bdeaee222de5a31025566a6e2841",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_cutoff_supplement.png"
+  },
+  {
+    "source_file": "probability_cutoff_supplement.svg",
+    "source_sha256": "fd56adcc90eb44269f6b2a8ec216ee0059769283e5d90c40b7f8e630b522afe0",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_cutoff_supplement.svg"
+  },
+  {
+    "source_file": "probability_errors.pdf",
+    "source_sha256": "8e1526850e01d668061619f82c04e99986eea25044a6f7d8d6a4eea65b5f4dbb",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_errors.pdf"
+  },
+  {
+    "source_file": "probability_errors.png",
+    "source_sha256": "ec7996888e78e82e2607a75d26c7d472e630e481d230197d2fc42e28203554c9",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_errors.png"
+  },
+  {
+    "source_file": "probability_errors.svg",
+    "source_sha256": "b201104dec0c70a59b49296ff74dc3c64efd43ebf387c5339edc596279cfd6a0",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_errors.svg"
+  },
+  {
+    "source_file": "probability_roc_calibration.pdf",
+    "source_sha256": "653505739085fd54f3cedf91005203a62c21a263f8f060b5d452ece38beabcc8",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_roc_calibration.pdf"
+  },
+  {
+    "source_file": "probability_roc_calibration.png",
+    "source_sha256": "925ff8f61627a00c4203b642b51b393d07340ca2dd62784d20f81032e85b2cd0",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_roc_calibration.png"
+  },
+  {
+    "source_file": "probability_roc_calibration.svg",
+    "source_sha256": "36a32d01c3c26c39ddc750d8347c706fdd104661808b274c53352da04cfe7431",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_roc_calibration.svg"
+  },
+  {
+    "source_file": "probability_roc_supplement.pdf",
+    "source_sha256": "1da586f348fa141140226644f9a04eeadb583ac833a2e9b1bdcd1a9c1265e4bc",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_roc_supplement.pdf"
+  },
+  {
+    "source_file": "probability_roc_supplement.png",
+    "source_sha256": "c495139faedb009d77606bcdd5b217758927117ddd25f5dd380ebf112d3ac9ba",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_roc_supplement.png"
+  },
+  {
+    "source_file": "probability_roc_supplement.svg",
+    "source_sha256": "542c3ce1cfce381f9c4d67cd2fad06971862880059188a351a5318c4d87eaef2",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/probability_roc_supplement.svg"
+  },
+  {
+    "source_file": "questions.csv",
+    "source_sha256": "b5d43c184c85e14a55efd838a907dde97b9c8b385c5111559e5f41101f52f707",
+    "action": "omitted",
+    "reason": "benchmark question text and answer text"
+  },
+  {
+    "source_file": "reliability.csv",
+    "source_sha256": "03f0eb1ee3a3b64b5e58e243c5baa6b2ff7902f6280f18252632e4de1cff7d38",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/reliability.csv"
+  },
+  {
+    "source_file": "repeat_resources.csv",
+    "source_sha256": "611cc9f269163a32f857d7d0f02dba5c330ade17fae728a9c7c52375e6b6e09d",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/repeat_resources.csv"
+  },
+  {
+    "source_file": "repeatability.csv",
+    "source_sha256": "dc3b914d32f5f1787efaf9ad684249202dcac4a7ad84ef6a8c6d2d661f5f474f",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/repeatability.csv"
+  },
+  {
+    "source_file": "repeatability_supplement.pdf",
+    "source_sha256": "c0fb702dd2dd9e764973a307afef53bd34eb2a023dae218b7e5f36eb1f33629e",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/repeatability_supplement.pdf"
+  },
+  {
+    "source_file": "repeatability_supplement.png",
+    "source_sha256": "79aeaae545c979d795a94236b6e59ddf87eab6f092feb9a88fa8ca157662a1bb",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/repeatability_supplement.png"
+  },
+  {
+    "source_file": "repeatability_supplement.svg",
+    "source_sha256": "ff5f523e0ab985ca1923bd4369a0aba6401f5243a6c32d17024328356f60b0fe",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/repeatability_supplement.svg"
+  },
+  {
+    "source_file": "risk_coverage.csv",
+    "source_sha256": "bef657e368c6853120ec2ce27074181845c52d807503466b08eedee535591988",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/risk_coverage.csv"
+  },
+  {
+    "source_file": "secondary_answers.csv",
+    "source_sha256": "309cf12af8cd56a0bb1d931a5df4bf3d99ca5bb4c74ececd69088f80bb248bb3",
+    "action": "omitted",
+    "reason": "Separate answer/reference-key table omitted; public outcome labels and correctness can reveal reference answers"
+  },
+  {
+    "source_file": "selected_attempts.csv",
+    "source_sha256": "6cfbbc02c1b5f0583c068f6a9885ea8ac47755d4329d8657a15aa78f7230f5b3",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/selected_attempts.csv"
+  },
+  {
+    "source_file": "statuses.csv",
+    "source_sha256": "b4d30e64cb372a9c2036e4dda20fd39244bfb04fe1949c848f86947f86c08821",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/statuses.csv"
+  },
+  {
+    "source_file": "vector_diagnostics.csv",
+    "source_sha256": "3d3898cf0b4f1236a165c021ff0d1fe2e5823f16e97de1bce1c21b8d6e63ba66",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/vector_diagnostics.csv"
+  },
+  {
+    "source_file": "visual_accuracy.csv",
+    "source_sha256": "0703ebef090222470e039bb6c8dd67730afaa73c33c18a9060c18d6f23939345",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/visual_accuracy.csv"
+  },
+  {
+    "source_file": "visual_paired.csv",
+    "source_sha256": "0286e5a4d6599f06a8f00a4e864581966975b38ea980b51706b7878eceb33b34",
+    "action": "exact copy",
+    "public_path": "results/verified_exports/visual_paired.csv"
+  }
+]

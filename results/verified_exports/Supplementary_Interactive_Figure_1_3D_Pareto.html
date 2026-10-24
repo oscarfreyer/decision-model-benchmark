@@ -1,0 +1,118 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Supplementary resource figure · version 3</title><style>
+body{margin:0;font:14px Arial,sans-serif;color:#333;background:white}
+.controls{padding:10px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+canvas{width:100%;height:640px;touch-action:none;cursor:grab;display:block}
+input{width:70px} #detail{min-height:35px;padding:8px}code{user-select:all}
+</style></head><body>
+<div class="controls">
+<label>Elevation <input id="elev" type="number" min="-89" max="89" step="1"></label>
+<label>Azimuth <input id="azim" type="number" step="1"></label>
+<button id="reset">Reset view</button><button id="out" aria-label="Zoom out">−</button><button id="in" aria-label="Zoom in">+</button><button id="download">Download HTML</button><label><input id="mesh" type="checkbox" checked>Pareto surface</label>
+<label><input id="labels" type="checkbox">IDs</label></div>
+<div class="controls"><code id="angles"></code><span>Drag or use arrow keys to rotate; scroll or use +/− to zoom. Hover for values. Orange: decision models; teal: generative configurations. Diamonds: 3D Pareto frontier; circles: dominated.</span></div>
+<canvas id="plot" tabindex="0" aria-label="Interactive accuracy, cost and duration plot"></canvas><div id="detail" role="status">Hover over a model for details.</div>
+<script>
+const data={"vertices": [[-2.1602756578201543, -0.34175076107240254, 85.2317360565593], [-2.1509276736576415, -0.4061948248597383, 87.82403770620581], [-1.9409243523456357, -0.42409335418408295, 88.37391987431265], [-1.583696468137912, -0.48181234170044457, 88.29536527886881], [-1.438277626025322, -0.4752580627036779, 89.08091123330715], [-1.2125960178420065, -0.5363516503341147, 79.41869599371564], [-1.1243850486746463, 0.4034595419088469, 94.18695993715632], [-0.954839024767799, 0.40545070862069166, 95.20816967792615], [-0.7225607895981581, 0.48245374141196157, 95.52238805970148], [-0.0678459896118638, 0.39904077232017876, 96.85781618224667], [0.1460334014584021, 0.2127246338545189, 95.12961508248232]], "triangles": [[7, 5, 8], [8, 6, 7], [7, 6, 5], [9, 5, 10], [8, 5, 9], [5, 3, 1], [5, 6, 4], [4, 3, 5], [6, 3, 4], [0, 1, 2], [2, 1, 3], [2, 6, 0], [2, 3, 6]], "points": [{"configuration": "G01", "accuracy": 0.9685781618224666, "cost_usd_per_1000": 0.8553699921445405, "duration_seconds": 2.506344541965518, "nondominated": true, "xyz": [-0.0678459896118638, 0.39904077232017876, 96.85781618224667], "name": "GPT-6.1-Sol-Low", "color": "#5F828E"}, {"configuration": "G02", "accuracy": 0.9418695993715632, "cost_usd_per_1000": 0.07509567949725059, "duration_seconds": 2.5319757499964908, "nondominated": true, "xyz": [-1.1243850486746463, 0.4034595419088469, 94.18695993715632], "name": "GPT-6-Luna-Low", "color": "#5F828E"}, {"configuration": "G03", "accuracy": 0.9520816967792616, "cost_usd_per_1000": 0.1109586017282011, "duration_seconds": 2.5436110830050893, "nondominated": true, "xyz": [-0.954839024767799, 0.40545070862069166, 95.20816967792615], "name": "GPT-6-Luna-High", "color": "#5F828E"}, {"configuration": "G04", "accuracy": 0.9512961508248232, "cost_usd_per_1000": 1.3996949685534592, "duration_seconds": 1.632016832998488, "nondominated": true, "xyz": [0.1460334014584021, 0.2127246338545189, 95.12961508248232], "name": "Claude-Sonnet-5.5-Low", "color": "#5F828E"}, {"configuration": "G05", "accuracy": 0.9677926158680282, "cost_usd_per_1000": 0.883748036135114, "duration_seconds": 3.188189667009283, "nondominated": false, "xyz": [-0.05367153828316961, 0.5035441498901118, 96.77926158680282], "name": "Gemini-3.8-Flash-Low", "color": "#5F828E"}, {"configuration": "G06", "accuracy": 0.9552238805970149, "cost_usd_per_1000": 0.18942583503534957, "duration_seconds": 3.037062584015075, "nondominated": true, "xyz": [-0.7225607895981581, 0.48245374141196157, 95.52238805970148], "name": "DeepSeek-V4.1-Flash-Low", "color": "#5F828E"}, {"configuration": "G07", "accuracy": 0.9457973291437549, "cost_usd_per_1000": 0.31127423330714843, "duration_seconds": 3.8364423330058344, "nondominated": false, "xyz": [-0.5068568279061992, 0.5839286745436382, 94.5797329143755], "name": "DeepSeek-V4.1-Flash-High", "color": "#5F828E"}, {"configuration": "G08", "accuracy": 0.8963079340141398, "cost_usd_per_1000": 3.880661429693637, "duration_seconds": 12.22534624999389, "nondominated": false, "xyz": [0.588905754146905, 1.0872611681909305, 89.63079340141398], "name": "Qwen3.8-Max-Low", "color": "#5F828E"}, {"configuration": "G09", "accuracy": 0.9410840534171249, "cost_usd_per_1000": 1.6098409269442262, "duration_seconds": 7.830246083962265, "nondominated": false, "xyz": [0.20678296425330803, 0.8937754110014315, 94.10840534171248], "name": "Qwen3.8-27B-Low", "color": "#5F828E"}, {"configuration": "G10", "accuracy": 0.9544383346425765, "cost_usd_per_1000": 3.7595424194815394, "duration_seconds": 6.197511582984589, "nondominated": false, "xyz": [0.575134989399132, 0.7922173471254726, 95.44383346425765], "name": "Qwen3.8-27B-Xhigh", "color": "#5F828E"}, {"configuration": "G11", "accuracy": 0.7831893165750197, "cost_usd_per_1000": 0.4360428122545169, "duration_seconds": 0.4162339579779655, "nondominated": false, "xyz": [-0.36047086804083, -0.3806624912535585, 78.31893165750196], "name": "Mistral-Medium-3.5-None", "color": "#5F828E"}, {"configuration": "G12", "accuracy": 0.9497250589159466, "cost_usd_per_1000": 7.245465640219953, "duration_seconds": 9.45838287496008, "nondominated": false, "xyz": [0.8600663012605819, 0.9758168902584794, 94.97250589159466], "name": "GLM-5-Native", "color": "#5F828E"}, {"configuration": "G13", "accuracy": 0.9450117831893166, "cost_usd_per_1000": 6.706251021209741, "duration_seconds": 44.29034750000574, "nondominated": false, "xyz": [0.8264798054432186, 1.6463090877524242, 94.50117831893165], "name": "Kimi-K2.5-Native", "color": "#5F828E"}, {"configuration": "G14", "accuracy": 0.8381775333857031, "cost_usd_per_1000": 0.05244230361351139, "duration_seconds": 1.5294488340150565, "nondominated": false, "xyz": [-1.2803182394712174, 0.18453495273187173, 83.81775333857031], "name": "Llama-4-Maverick-Standard", "color": "#5F828E"}, {"configuration": "G15", "accuracy": 0.8499607227022781, "cost_usd_per_1000": 0.13080294579732915, "duration_seconds": 1.6757131250342354, "nondominated": false, "xyz": [-0.8833824752080912, 0.2241996712879894, 84.99607227022781], "name": "Kimi-K2.5-Instant", "color": "#5F828E"}, {"configuration": "D01", "accuracy": 0.8829536527886881, "cost_usd_per_1000": 0.026079756480754127, "duration_seconds": 0.32975216704653576, "nondominated": true, "xyz": [-1.583696468137912, -0.48181234170044457, 88.29536527886881], "name": "JEV-1.13", "color": "#E6A052"}, {"configuration": "D02", "accuracy": 0.8908091123330715, "cost_usd_per_1000": 0.03645208497246263, "duration_seconds": 0.33476645802147686, "nondominated": true, "xyz": [-1.438277626025322, -0.4752580627036779, 89.08091123330715], "name": "GPT-6-Luna-Decisions", "color": "#E6A052"}, {"configuration": "D03", "accuracy": 0.6771406127258445, "cost_usd_per_1000": 0.012021238020424195, "duration_seconds": 0.6358412090921775, "nondominated": false, "xyz": [-1.9200508037349657, -0.19665132873113456, 67.71406127258444], "name": "Kev-4B", "color": "#E6A052"}, {"configuration": "D04", "accuracy": 0.826394344069128, "cost_usd_per_1000": 0.029780400628436763, "duration_seconds": 0.8757405420765281, "nondominated": false, "xyz": [-1.5260694640872325, -0.05762454432845954, 82.6394344069128], "name": "Solar-Decide", "color": "#E6A052"}, {"configuration": "D05", "accuracy": 0.852317360565593, "cost_usd_per_1000": 0.006913919874312648, "duration_seconds": 0.45524924993515015, "nondominated": true, "xyz": [-2.1602756578201543, -0.34175076107240254, 85.2317360565593], "name": "Mercury-Decide", "color": "#E6A052"}, {"configuration": "D06", "accuracy": 0.8476040848389631, "cost_usd_per_1000": 0.09956945797329143, "duration_seconds": 0.47715562500525266, "nondominated": false, "xyz": [-1.0018738570361334, -0.321339952075156, 84.76040848389631], "name": "Clef", "color": "#E6A052"}, {"configuration": "D07", "accuracy": 0.7368421052631579, "cost_usd_per_1000": 0.015765164179104476, "duration_seconds": 0.5198130420176312, "nondominated": false, "xyz": [-1.8023015021309294, -0.28415282832628325, 73.68421052631578], "name": "Clef-Flash", "color": "#E6A052"}, {"configuration": "D08", "accuracy": 0.8837391987431265, "cost_usd_per_1000": 0.011457124901806757, "duration_seconds": 0.3766228329623118, "nondominated": true, "xyz": [-1.9409243523456357, -0.42409335418408295, 88.37391987431265], "name": "Liquid-d1", "color": "#E6A052"}, {"configuration": "D09", "accuracy": 0.8782403770620582, "cost_usd_per_1000": 0.007064351924587589, "duration_seconds": 0.39246883406303823, "nondominated": true, "xyz": [-2.1509276736576415, -0.4061948248597383, 87.82403770620581], "name": "Decider-V1.1-27B", "color": "#E6A052"}, {"configuration": "D10", "accuracy": 0.7289866457187746, "cost_usd_per_1000": 0.029780400628436763, "duration_seconds": 0.8025014580925927, "nondominated": false, "xyz": [-1.5260694640872325, -0.09555416983774226, 72.89866457187746], "name": "Solar-Decide-Flash", "color": "#E6A052"}, {"configuration": "D11", "accuracy": 0.7941869599371564, "cost_usd_per_1000": 0.06129202670856245, "duration_seconds": 0.2908361250301823, "nondominated": true, "xyz": [-1.2125960178420065, -0.5363516503341147, 79.41869599371564], "name": "Clef-Omni", "color": "#E6A052"}, {"configuration": "D12", "accuracy": 0.7352710133542812, "cost_usd_per_1000": 0.011448798114689709, "duration_seconds": 0.6370007910300046, "nondominated": false, "xyz": [-1.941240102804904, -0.1958600283557756, 73.52710133542813], "name": "Drex-v1.5", "color": "#E6A052"}, {"configuration": "D13", "accuracy": 0.795758051846033, "cost_usd_per_1000": 0.012560045561665357, "duration_seconds": 0.40225216594990343, "nondominated": false, "xyz": [-1.9010087851892716, -0.39550160873904194, 79.5758051846033], "name": "Microsoft-Decision-1", "color": "#E6A052"}], "view": [30, -135], "version": 3}, canvas=document.getElementById('plot'), ctx=canvas.getContext('2d');
+const el=document.getElementById('elev'), az=document.getElementById('azim');
+const mesh=document.getElementById('mesh'), labels=document.getElementById('labels');
+const detail=document.getElementById('detail');
+let elevation=data.view[0], azimuth=data.view[1], zoom=1, drag=null, projected=[], panes=[];
+const ranges=[0,1,2].map(k=>{const a=data.points.map(p=>p.xyz[k]);
+  let lo=Math.min(...a),hi=Math.max(...a),pad=(hi-lo||1)*.08;return [lo-pad,hi+pad];});
+const rad=Math.PI/180;
+function project(v){
+  const q=v.map((n,k)=>(n-ranges[k][0])/(ranges[k][1]-ranges[k][0])-.5);q[2]*=.8;
+  const a=azimuth*rad,e=elevation*rad;
+  const right=-Math.sin(a)*q[0]+Math.cos(a)*q[1];
+  const up=-Math.sin(e)*Math.cos(a)*q[0]-Math.sin(e)*Math.sin(a)*q[1]+Math.cos(e)*q[2];
+  const depth=Math.cos(e)*Math.cos(a)*q[0]+Math.cos(e)*Math.sin(a)*q[1]+Math.sin(e)*q[2];
+  const w=canvas.clientWidth,h=canvas.clientHeight,s=zoom*Math.min(w*.64,h*.70);
+  return [w/2+s*right,h/2-s*up,depth];
+}
+function line(a,b,color='#aaa'){const p=project(a),q=project(b);ctx.strokeStyle=color;
+ ctx.beginPath();ctx.moveTo(p[0],p[1]);ctx.lineTo(q[0],q[1]);ctx.stroke();}
+function draw(){
+ const dpr=devicePixelRatio||1,w=canvas.clientWidth,h=canvas.clientHeight;
+ canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+ ctx.clearRect(0,0,w,h);ctx.font='12px Arial';ctx.lineWidth=.7;
+ el.value=elevation;az.value=azimuth;
+ document.getElementById('angles').textContent=`View ${elevation}°, ${azimuth}° · ${zoom.toFixed(2)}×`;
+ const base=ranges.map(r=>r[0]);
+ const names=['Cost (USD/1,000; log scale)','Duration (s; log scale)','Accuracy (%)'];
+ for(let k=0;k<3;k++){
+  const end=base.slice();end[k]=ranges[k][1];line(base,end,'#444');
+  const p=project(end);ctx.fillStyle='#333';ctx.textAlign='center';ctx.fillText(names[k],p[0],p[1]-20);
+  const ticks=k<2?Array.from({length:Math.max(0,Math.floor(ranges[k][1])-Math.ceil(ranges[k][0])+1)},(_,i)=>Math.ceil(ranges[k][0])+i)
+   :Array.from({length:5},(_,i)=>ranges[k][0]+i*(ranges[k][1]-ranges[k][0])/4);
+  for(const t of ticks){const v=base.slice();v[k]=t;const s=project(v);
+   ctx.fillText(k<2?(10**t).toPrecision(2):t.toFixed(0),s[0]+12,s[1]+13);}
+ }
+ // Triangles are anchored exclusively to saved 3D nondominated estimates.
+ panes=data.triangles.map(t=>t.map(i=>project(data.vertices[i])))
+  .sort((a,b)=>a.reduce((s,p)=>s+p[2],0)-b.reduce((s,p)=>s+p[2],0));
+ function polygon(f){ctx.beginPath();f.forEach((q,i)=>i?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1]));ctx.closePath();}
+ if(mesh.checked)for(const f of panes){polygon(f);ctx.fillStyle='rgba(173,198,207,.28)';ctx.fill();ctx.strokeStyle='rgba(64,64,64,.55)';ctx.lineWidth=1;ctx.stroke();}
+ // Clip each pane to the portion nearer than a marker's constant-depth billboard.
+ function inFront(face,depth){
+  const out=[];
+  for(let i=0;i<face.length;i++){
+   const a=face[i],b=face[(i+1)%face.length],ai=a[2]>depth,bi=b[2]>depth;
+   if(ai)out.push(a);
+   if(ai!==bi){const t=(depth-a[2])/(b[2]-a[2]);out.push(a.map((v,k)=>v+t*(b[k]-v)));}
+  }return out;
+ }
+ projected=data.points.map(p=>({...p,screen:project(p.xyz)})).sort((a,b)=>a.screen[2]-b.screen[2]);
+ for(const p of projected){const [x,y]=p.screen;ctx.beginPath();
+  if(p.nondominated){ctx.moveTo(x,y-6);ctx.lineTo(x+6,y);ctx.lineTo(x,y+6);ctx.lineTo(x-6,y);ctx.closePath();}
+  else ctx.arc(x,y,4,0,2*Math.PI);
+  ctx.fillStyle=p.color;ctx.fill();ctx.strokeStyle='#404040';ctx.lineWidth=p.nondominated?1.7:.8;ctx.stroke();
+  ctx.save();ctx.clip();
+  if(mesh.checked)for(const f of panes){const front=inFront(f,p.screen[2]);
+   if(front.length>=3){polygon(front);ctx.fillStyle='rgba(173,198,207,.28)';ctx.fill();}}
+  ctx.restore();ctx.lineWidth=.7;
+  if(labels.checked){ctx.fillStyle='#333';ctx.textAlign='left';ctx.fillText(p.configuration,x+7,y-7);}
+ }
+}
+canvas.onpointerdown=e=>{drag=[e.clientX,e.clientY,elevation,azimuth];canvas.setPointerCapture(e.pointerId);};
+canvas.onpointerup=()=>{drag=null;};canvas.onpointercancel=()=>{drag=null;};
+canvas.onpointermove=e=>{
+ if(drag){azimuth=Math.round(drag[3]-(e.clientX-drag[0])*.4);
+  elevation=Math.max(-89,Math.min(89,Math.round(drag[2]+(e.clientY-drag[1])*.4)));draw();return;}
+ const r=canvas.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
+ const near=projected.map(p=>[Math.hypot(x-p.screen[0],y-p.screen[1]),p]).sort((a,b)=>a[0]-b[0])[0];
+ if(near&&near[0]<18){const p=near[1];detail.textContent=`${p.configuration}: ${p.name} | Accuracy ${(100*p.accuracy).toFixed(2)}% | Cost $${p.cost_usd_per_1000.toPrecision(4)}/1,000 | Duration ${p.duration_seconds.toPrecision(4)} s${p.nondominated?' | 3D Pareto frontier':' | Dominated'}`;}else detail.textContent='Hover over a model for details.';
+};
+el.onchange=()=>{const v=Number(el.value);if(Number.isFinite(v))elevation=Math.max(-89,Math.min(89,v));draw();};
+az.onchange=()=>{const v=Number(az.value);if(Number.isFinite(v))azimuth=v;draw();};
+mesh.onchange=labels.onchange=draw;
+function setZoom(z){zoom=Math.max(.55,Math.min(2.5,z));draw();}
+canvas.addEventListener('wheel',e=>{e.preventDefault();setZoom(zoom*Math.exp(-e.deltaY*.001));},{passive:false});
+document.getElementById('in').onclick=()=>setZoom(zoom*1.15);
+document.getElementById('out').onclick=()=>setZoom(zoom/1.15);
+canvas.onkeydown=e=>{
+ if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','+','-','Home'].includes(e.key))return;
+ e.preventDefault();
+ if(e.key==='Home'){[elevation,azimuth]=data.view;zoom=1;}
+ if(e.key==='ArrowLeft')azimuth-=5;if(e.key==='ArrowRight')azimuth+=5;
+ if(e.key==='ArrowUp')elevation=Math.min(89,elevation+5);if(e.key==='ArrowDown')elevation=Math.max(-89,elevation-5);
+ if(e.key==='+')zoom=Math.min(2.5,zoom*1.15);if(e.key==='-')zoom=Math.max(.55,zoom/1.15);draw();
+};
+canvas.onpointerleave=()=>{if(!drag)detail.textContent='Hover over a model for details.';};
+document.getElementById('reset').onclick=()=>{[elevation,azimuth]=data.view;zoom=1;draw();};
+document.getElementById('download').onclick=()=>{
+ const url=URL.createObjectURL(new Blob(['<!doctype html>'+document.documentElement.outerHTML],{type:'text/html'}));
+ const a=document.createElement('a');a.href=url;a.download='supplementary-resource-v3.html';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+};
+// Choose a shallow front-quadrant camera minimizing projected point overlaps.
+let best=Infinity,chosen=data.view;
+for(const e of [20,25,30,35,40])for(const a of [-160,-150,-140,-130,-120,-110]){
+ elevation=e;azimuth=a;const ps=data.points.map(p=>project(p.xyz));let score=0;
+ for(let i=0;i<ps.length;i++)for(let j=0;j<i;j++){
+  const d=Math.hypot(ps[i][0]-ps[j][0],ps[i][1]-ps[j][1]);score+=Math.max(0,22-d)**2;
+ }
+ score+=.002*((e-30)**2+(a+135)**2);
+ if(score<best){best=score;chosen=[e,a];}
+}
+data.view=chosen;[elevation,azimuth]=chosen;
+new ResizeObserver(draw).observe(canvas);draw();
+</script></body></html>
