@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "type": "public_release_verification_receipt",
+  "version": "0.1.0-rc3",
+  "verified_date": "2026-10-23",
+  "archive_file": "decision-model-benchmark-20261023-rc3.zip",
+  "archive_sha256": "9f5d130a66fc9163d29d257f34ffba175e90c6e9fceb91851aaa5cb57747ed78",
+  "manifest_file": "PUBLIC_RELEASE_MANIFEST.json",
+  "manifest_sha256": "0f8aa9670a30f532476826cc65c9fe879766e148999a412c0b6ab052631d20a0",
+  "result": "passed",
+  "environment": {
+    "python": "3.14.7",
+    "platform": "macOS 27.0.1 arm64",
+    "pinned_dependencies": 102,
+    "requirements_lock_sha256": "e24784a3adb3d387f090f6f43851b3df1cfbc6473dd67c720398999914f65642",
+    "installation": "Fresh isolated venv; offline cached wheel artifacts; no development-environment packages copied",
+    "font": {
+      "family": "Arial",
+      "file": "Arial.ttf",
+      "sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9",
+      "redistributed": false
+    }
+  },
+  "checks": {
+    "preparation_collection_tests": 101,
+    "analysis_tests": 68,
+    "total_tests_passed": 169,
+    "structured_outcomes": 68742,
+    "preserved_calls": 69318,
+    "configurations": 28,
+    "runs": 54,
+    "questions_per_run": 1273,
+    "scientific_summary_exactly_identical": true,
+    "strict_comparison_unchanged": true,
+    "notebook_code_cells_completed": 13,
+    "notebook_error_outputs": 0,
+    "pngs_byte_identical": 8,
+    "csvs_byte_identical": 15,
+    "svgs_identical_after_timestamp_normalization": 8,
+    "pdfs_identical_after_date_id_normalization": 8,
+    "interactive_html_byte_identical": true,
+    "all_bound_candidate_files_preserved": true
+  },
+  "network": "External network access denied by OS sandbox; local notebook kernel connections allowed; execution environment excluded credentials",
+  "recomputed_summary_sha256": "fb92d71b4cbdcc0a0263f43d5d17a508ec39f76c8645e7003957579683736be0",
+  "retained_evidence_manifest_sha256": "6dcaa78c2330290483a42a005fa58fb1a4d5b68c8ca6078d1ad83363861c064d",
+  "scope": "Author-side local verification on the stated platform; external package acquisition and other platforms were not tested",
+  "license": "CC-BY-4.0",
+  "verification_model_api_calls": 0,
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "copyright": "Copyright (c) 2026 Oscar Freyer and study contributors",
+  "attribution": "Credit the study title and creators in the archive CITATION.cff, identify version 0.1.0-rc3 and this receipt, link the licence and indicate changes."
+}

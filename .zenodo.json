@@ -1,0 +1,69 @@
+{
+  "title": "Benchmarking decision models against generative large language models on medical multiple-choice questions: code and structured data",
+  "version": "0.1.0-rc4",
+  "publication_date": "2026-10-27",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Freyer, Oscar",
+      "affiliation": "Else Kröner Fresenius Center for Digital Health, Faculty of Medicine and University Hospital Carl Gustav Carus, TUD Dresden University of Technology, Dresden, Germany"
+    },
+    {
+      "name": "Glauert, Daniel",
+      "affiliation": "Independent researcher, Berlin, Germany"
+    },
+    {
+      "name": "Hofmann, Moritz",
+      "affiliation": "Denkmal.ai, Berlin, Germany"
+    },
+    {
+      "name": "Ostermann, Max",
+      "affiliation": "Else Kröner Fresenius Center for Digital Health, Faculty of Medicine and University Hospital Carl Gustav Carus, TUD Dresden University of Technology, Dresden, Germany"
+    },
+    {
+      "name": "Gilbert, Stephen",
+      "affiliation": "Else Kröner Fresenius Center for Digital Health, Faculty of Medicine and University Hospital Carl Gustav Carus, TUD Dresden University of Technology, Dresden, Germany; Faculty of Business and Economics, TUD Dresden University of Technology, Dresden, Germany"
+    },
+    {
+      "name": "Kather, Jakob Nikolas",
+      "affiliation": "Else Kröner Fresenius Center for Digital Health, Faculty of Medicine and University Hospital Carl Gustav Carus, TUD Dresden University of Technology, Dresden, Germany; Institute for Medical AI (IMAI), Heidelberg University Hospital and Medical Faculty of Heidelberg University, Heidelberg, Germany"
+    }
+  ],
+  "description": "<p>RC4 provides code and structured data for “Benchmarking decision models against generative large language models on medical multiple-choice questions”. It is a release-metadata successor to RC3, created to trigger the connected GitHub–Zenodo archiving workflow. All scientific code, the analysis notebook, fixed configurations, structured data, methods, accepted numerical results and publication figures are byte-identical to RC3.</p><p>The study evaluated 13 decision models and 15 generative configurations on the same 1,273 four-option MedQA questions under closed-book, text-only conditions. Decision models had three runs and generative configurations one, giving 54 runs, 68,742 outcomes and 69,318 preserved initial/retry calls. The archive contains preparation and hosted-model collection code, scientific kernels, selected and first-attempt outcomes, native probabilities, resource measurements, retry provenance, Study Protocol v2.8, SAP v1.8 and presentation 1.51.</p><p>RC3 verification on 23 October 2026 used a fresh Python 3.14.7 environment on macOS 27.0.1 arm64, with all 102 pinned dependencies installed from local wheel artifacts. All 169 tests passed. Numerical recalculation reproduced the accepted scientific summary exactly, all 13 notebook code cells completed without errors, eight PNG figures and 15 CSVs were byte-identical, SVG/PDF comparisons passed after creation-date/document-ID normalization, and the interactive HTML was byte-identical. RC4 does not claim a new runtime execution. Its manifest and provenance/RC4_PRESERVATION.json identify the unchanged files and the included original RC3 verification receipt.</p><p>Reproducing the saved analysis requires no new model calls. Numerical recalculation uses the exact upstream MedQA test file identified in README.md; exact figure rendering requires the specified Arial font, obtained separately. Raw request/response bodies, reasoning text, credentials, upstream question/option text, a separate reference-key file and model weights are excluded. Selected labels and correctness can reveal reference answers; upstream MedQA keys are public.</p><p>MIT applies to the original software and associated materials covered by LICENSE. CC BY 4.0 applies to the structured study data and result figures under data/LICENSE and results/LICENSE, and to provenance/RC3_VERIFICATION.json. These are component licences, not alternative licences for every file. The searchable MIT licence identifies the software component; it does not replace the CC BY 4.0 data/figure notices. Dependencies, upstream MedQA and separately obtained Arial retain their own terms.</p><p>Funding acknowledgement: This work was supported by the European Commission under the Horizon Europe Program, as part of the project CYMEDSEC (101094218). The views and opinions expressed are those of the authors only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authorities can be held responsible for them. Responsibility for the information and views expressed therein lies entirely with the authors. This work has been supported by the BRIDGE project, funded by the Innovative Health Initiative Joint Undertaking (IHI JU) under grant agreement No 101165912. The IHI JU receives support from the European Union’s Horizon Europe research and innovation programme and from COCIR, EFPIA, EuropaBio, MedTech Europe, and Vaccines Europe. This publication reflects only the views of the authors and does not necessarily represent the views of the BRIDGE consortium. This work was supported by the German Federal Ministry of Education, Research and Space (BMFTR) as part of the Zukunftscluster SEMECO (03ZU2210BA). The views and opinions expressed are those of the authors only and do not necessarily reflect those of their employer. The funders had no role in study design, data collection, analysis, interpretation of the results, or writing the manuscript.</p><p>Cite this version-specific Zenodo DOI and the study. RC3 remains preserved as the earlier release.</p>",
+  "notes": "MIT applies to the original software and associated materials covered by LICENSE. CC BY 4.0 applies to the structured study data and result figures under data/LICENSE and results/LICENSE, and to provenance/RC3_VERIFICATION.json. These are component licences, not alternative licences for every file. The searchable MIT licence identifies the software component; it does not replace the CC BY 4.0 data/figure notices. Dependencies, upstream MedQA and separately obtained Arial retain their own terms. The study identifies Stephen Gilbert and Jakob Nikolas Kather as equal senior authors. Funding awards: CYMEDSEC 101094218; BRIDGE 101165912; SEMECO 03ZU2210BA. The two European awards are also indexed through the verified catalogue identifiers; the German award is preserved in the acknowledgement.",
+  "keywords": [
+    "MedQA",
+    "medical multiple-choice questions",
+    "decision models",
+    "large language models",
+    "benchmarking",
+    "reproducibility",
+    "probability calibration"
+  ],
+  "language": "eng",
+  "imprint_publisher": "Zenodo",
+  "grants": [
+    {
+      "id": "10.13039/501100000780::101094218"
+    },
+    {
+      "id": "10.13039/501100000780::101165912"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/oscarfreyer/decision-model-benchmark/releases/tag/v0.1.0-rc4",
+      "scheme": "url",
+      "relation": "isIdenticalTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/oscarfreyer/decision-model-benchmark/releases/tag/v0.1.0-rc3",
+      "scheme": "url",
+      "relation": "isNewVersionOf",
+      "resource_type": "software"
+    }
+  ]
+}

@@ -1,20 +1,37 @@
 cff-version: 1.2.0
 message: "Please cite the study and the versioned code/data release you use."
 type: software
-title: "Benchmarking decision models against generative large language models on medical multiple-choice questions"
-version: "0.1.0-rc3"
+title: "Benchmarking decision models against generative large language models on medical multiple-choice questions: code and structured data"
+version: "0.1.0-rc4"
+date-released: "2026-10-27"
 license: MIT
+repository-code: "https://github.com/oscarfreyer/decision-model-benchmark"
+url: "https://github.com/oscarfreyer/decision-model-benchmark/releases/tag/v0.1.0-rc4"
 authors:
-  - family-names: Freyer
-    given-names: Oscar
-  - family-names: Glauert
-    given-names: Daniel
-  - family-names: Hofmann
-    given-names: Moritz
-  - family-names: Ostermann
-    given-names: Max
-  - family-names: Gilbert
-    given-names: Stephen
-  - family-names: Kather
-    given-names: Jakob Nikolas
-abstract: "Code and structured saved results for a 28-configuration MedQA benchmark, with the frozen A4 presentation."
+  - family-names: "Freyer"
+    given-names: "Oscar"
+    affiliation: "Else Kröner Fresenius Center for Digital Health, Faculty of Medicine and University Hospital Carl Gustav Carus, TUD Dresden University of Technology, Dresden, Germany"
+  - family-names: "Glauert"
+    given-names: "Daniel"
+    affiliation: "Independent researcher, Berlin, Germany"
+  - family-names: "Hofmann"
+    given-names: "Moritz"
+    affiliation: "Denkmal.ai, Berlin, Germany"
+  - family-names: "Ostermann"
+    given-names: "Max"
+    affiliation: "Else Kröner Fresenius Center for Digital Health, Faculty of Medicine and University Hospital Carl Gustav Carus, TUD Dresden University of Technology, Dresden, Germany"
+  - family-names: "Gilbert"
+    given-names: "Stephen"
+    affiliation: "Else Kröner Fresenius Center for Digital Health, Faculty of Medicine and University Hospital Carl Gustav Carus, TUD Dresden University of Technology, Dresden, Germany; Faculty of Business and Economics, TUD Dresden University of Technology, Dresden, Germany"
+  - family-names: "Kather"
+    given-names: "Jakob Nikolas"
+    affiliation: "Else Kröner Fresenius Center for Digital Health, Faculty of Medicine and University Hospital Carl Gustav Carus, TUD Dresden University of Technology, Dresden, Germany; Institute for Medical AI (IMAI), Heidelberg University Hospital and Medical Faculty of Heidelberg University, Heidelberg, Germany"
+abstract: "Code and structured results for the 28-configuration MedQA benchmark; RC4 updates release metadata while preserving the verified RC3 scientific files."
+keywords:
+  - "MedQA"
+  - "medical multiple-choice questions"
+  - "decision models"
+  - "large language models"
+  - "benchmarking"
+  - "reproducibility"
+  - "probability calibration"

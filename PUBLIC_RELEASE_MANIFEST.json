@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "type": "public_repository_candidate",
-  "version": "0.1.0-rc3",
-  "prepared_date": "2026-10-23",
-  "status": "prepared_not_executed",
+  "version": "0.1.0-rc4",
+  "prepared_date": "2026-10-27",
+  "status": "metadata_prepared_scientific_bytes_preserved",
   "source_presentation_freeze_sha256": "fb68289d8ebd291d8560c9ebcee6096983d365045557f5d69e655a1495350bf9",
   "source_executed_notebook_sha256": "91ba14d18e24795ceb85b9a4bd6dd893bd48737a6ae2750b0fa20d3a440f4250",
   "source_export_manifest_sha256": "2f42bb628dff8e233d8a5ca7c33d5fea01c495bdf01beb633881e298e783dc37",
@@ -11,32 +11,36 @@
   "code_license": "MIT",
   "data_license": "CC-BY-4.0",
   "supersedes": {
-    "version": "0.1.0-rc2",
-    "archive": "decision-model-benchmark-20261023-rc2.zip",
-    "archive_sha256": "d53edba115e31deb1ae5c564a628233384dde9f964c830248b91febb4ed20b61"
+    "version": "0.1.0-rc3",
+    "archive": "decision-model-benchmark-20261023-rc3.zip",
+    "archive_sha256": "9f5d130a66fc9163d29d257f34ffba175e90c6e9fceb91851aaa5cb57747ed78"
   },
   "corrections": [
-    "Restore frozen G15 effective effort label none; Instant remains the disabled-thinking variant.",
-    "Order runs by replicate and frozen G01-G15/D01-D13 roster to preserve frontier list order.",
-    "Preserve scientific code, observations, accepted numerical reference and graphics; retain the strict exact-summary comparison."
+    "Update version/citation and Zenodo archiving metadata.",
+    "Include unchanged RC3 execution receipt and byte-preservation evidence.",
+    "All scientific code, notebook, configurations, dependencies, methods, data, numerical results and figures remain byte-identical to RC3."
   ],
-  "status_scope": "Archive-creation state. Later execution evidence is supplied separately and bound to the exact archive SHA-256.",
+  "status_scope": "Metadata-preparation snapshot. RC3 runtime evidence is retained separately from RC4 static preservation; publication verification is supplied outside the immutable archive.",
   "files": {
     ".gitignore": {
       "bytes": 220,
       "sha256": "fb6cb152987b6b3457c6dea8146861683615fcde723d7638b9b2dd41d0348970"
     },
+    ".zenodo.json": {
+      "bytes": 7434,
+      "sha256": "c1048b219f2754010862c13c0347123d42f0b775de30c4f749cb8a435899464f"
+    },
     "CITATION.cff": {
-      "bytes": 694,
-      "sha256": "eca043c64a1683b76ca02223342f37c424bf012110eba536b4b0f40a394c0dd2"
+      "bytes": 2237,
+      "sha256": "b1554d4a7d9b3d4badab7bfbd15f88d995a1480c00f6a3391c0783b3e41bcac0"
     },
     "LICENSE": {
       "bytes": 1086,
       "sha256": "e6f4202c02ff48acf4f67d8ed06238e8c611225f3fb61fe7e79513b0ae3cf04e"
     },
     "README.md": {
-      "bytes": 7052,
-      "sha256": "8158eed493d7867a195a461c14e0c18cfbb74af744e088de1eb5e80d2e5e74ea"
+      "bytes": 7805,
+      "sha256": "9551998b2e621412b5d9d8938c396707ea758c7960c8ea3d2904344def515551"
     },
     "THIRD_PARTY_NOTICES.md": {
       "bytes": 1222,
@@ -370,6 +374,14 @@
       "bytes": 6032,
       "sha256": "b66adcbc67c27b5caf0b6df0fc88e28dbb9083bb68120571808b2824bd0254ee"
     },
+    "provenance/RC3_VERIFICATION.json": {
+      "bytes": 2508,
+      "sha256": "620afc49c07c99ee353de04cc66ae660128b4084a52ad2dd9e0d155f5725748c"
+    },
+    "provenance/RC4_PRESERVATION.json": {
+      "bytes": 15954,
+      "sha256": "11bac122ad00d862f54d1b8064db330fb83809ef906dc4e77350df8908c664e5"
+    },
     "provenance/data_field_mapping.json": {
       "bytes": 2005,
       "sha256": "f47c5ef176b0ddf06167da6f09980aea442902308a2bd36b69cca08946b2d98e"
@@ -387,16 +399,16 @@
       "sha256": "0b523dc3137759fa497bac76d8d01a25ba3e67b3ad2ef8e08c7db31cbd94442f"
     },
     "provenance/preparation_checks.json": {
-      "bytes": 1765,
-      "sha256": "881f5e6e2107cdabbee113e6820bae63b1ff3c3fb7334fd708dd07792270c40b"
+      "bytes": 2054,
+      "sha256": "1db1fcccc5d3b19f5523dd361a2ffa1ac9003bebc08b088c3b957daf5243f61d"
     },
     "provenance/presentation.json": {
       "bytes": 4033,
       "sha256": "66f56aeae993c018bd5f76c6434c8b84f75e2357d714cdff7787faee48290b16"
     },
     "provenance/source_mapping.json": {
-      "bytes": 30716,
-      "sha256": "da4a905ee224ccf0d5653aa682d3105f50140584cc51dc570a8a1cd232c4674b"
+      "bytes": 32196,
+      "sha256": "935f0ed8443a497027d5a6c776e419ec70c802226ea37ad2be68608f7250e915"
     },
     "requirements.lock": {
       "bytes": 1944,

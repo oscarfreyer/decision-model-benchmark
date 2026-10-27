@@ -490,9 +490,10 @@
   },
   {
     "public_path": "CITATION.cff",
-    "public_sha256": "eca043c64a1683b76ca02223342f37c424bf012110eba536b4b0f40a394c0dd2",
-    "transformation": "Public derivative; path/metadata/interface/fixture adaptation. Scientific kernels and plotting source stay unchanged. RC2: clarify public reference-key disclosure or update candidate version. RC3: update candidate metadata and external verification wording.",
-    "source_sha256": null
+    "public_sha256": "b1554d4a7d9b3d4badab7bfbd15f88d995a1480c00f6a3391c0783b3e41bcac0",
+    "transformation": "Public derivative; path/metadata/interface/fixture adaptation. Scientific kernels and plotting source stay unchanged. RC2: clarify public reference-key disclosure or update candidate version. RC3: update candidate metadata and external verification wording. RC4: release metadata only; unchanged scientific files bound by RC4_PRESERVATION.json.",
+    "source_sha256": null,
+    "rc3_public_sha256": "eca043c64a1683b76ca02223342f37c424bf012110eba536b4b0f40a394c0dd2"
   },
   {
     "public_path": "LICENSE",
@@ -502,9 +503,10 @@
   },
   {
     "public_path": "README.md",
-    "public_sha256": "8158eed493d7867a195a461c14e0c18cfbb74af744e088de1eb5e80d2e5e74ea",
-    "transformation": "Public derivative; path/metadata/interface/fixture adaptation. Scientific kernels and plotting source stay unchanged. RC2: clarify public reference-key disclosure or update candidate version. RC3: update candidate metadata and external verification wording.",
-    "source_sha256": null
+    "public_sha256": "9551998b2e621412b5d9d8938c396707ea758c7960c8ea3d2904344def515551",
+    "transformation": "Public derivative; path/metadata/interface/fixture adaptation. Scientific kernels and plotting source stay unchanged. RC2: clarify public reference-key disclosure or update candidate version. RC3: update candidate metadata and external verification wording. RC4: release metadata only; unchanged scientific files bound by RC4_PRESERVATION.json.",
+    "source_sha256": null,
+    "rc3_public_sha256": "8158eed493d7867a195a461c14e0c18cfbb74af744e088de1eb5e80d2e5e74ea"
   },
   {
     "public_path": "THIRD_PARTY_NOTICES.md",
@@ -594,5 +596,26 @@
     "source_sha256": "f3ac6c87e34bf12fd359cb58871e1e404f1a49c0b9f13c86df4e330cb82f88ed",
     "public_sha256": "b8e3e4b7d4f4f70815fcf75875875a601cbac90a9aaa66ab0cee73c0f65f9e62",
     "transformation": "Restore frozen G15 effective effort none and replicate/frozen-roster run order. All item/run identities, outcomes, calls, methods, bindings and scientific results unchanged."
+  },
+  {
+    "public_path": ".zenodo.json",
+    "public_sha256": "c1048b219f2754010862c13c0347123d42f0b775de30c4f749cb8a435899464f",
+    "source": "RC3 reviewed release metadata/verification or exact RC3 scientific inventory",
+    "source_sha256": null,
+    "transformation": "RC4 archiving metadata and preserved verification evidence; no scientific change."
+  },
+  {
+    "public_path": "provenance/RC3_VERIFICATION.json",
+    "public_sha256": "620afc49c07c99ee353de04cc66ae660128b4084a52ad2dd9e0d155f5725748c",
+    "source": "RC3 reviewed release metadata/verification or exact RC3 scientific inventory",
+    "source_sha256": null,
+    "transformation": "RC4 archiving metadata and preserved verification evidence; no scientific change."
+  },
+  {
+    "public_path": "provenance/RC4_PRESERVATION.json",
+    "public_sha256": "11bac122ad00d862f54d1b8064db330fb83809ef906dc4e77350df8908c664e5",
+    "source": "RC3 reviewed release metadata/verification or exact RC3 scientific inventory",
+    "source_sha256": null,
+    "transformation": "RC4 archiving metadata and preserved verification evidence; no scientific change."
   }
 ]

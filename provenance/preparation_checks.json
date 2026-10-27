@@ -1,5 +1,5 @@
 {
-  "status": "prepared_not_executed",
+  "status": "metadata_prepared_scientific_bytes_preserved",
   "packaging_checks": {
     "python_syntax": "pass",
     "notebook_schema_and_cleared_outputs": "pass",
@@ -39,7 +39,10 @@
   "clean_environment_installation_verified": false,
   "published": false,
   "verification_boundary": "Checks bind copied source/data/export values and the declared omissions. They do not establish runtime reproduction or independent validation of private raw API logs.",
-  "candidate_version": "0.1.0-rc3",
+  "candidate_version": "0.1.0-rc4",
   "reference_key_disclosure": "Upstream keys are public; selected labels and correctness can reveal reference answers. Explicit key fields and a separate key file are omitted.",
-  "status_scope": "Archive-creation state. Later execution evidence is supplied separately and bound to the exact archive SHA-256."
+  "status_scope": "Archive-creation state. Later execution evidence is supplied separately and bound to the exact archive SHA-256.",
+  "rc4_scope": "Release metadata only; all scientific files match the fully verified RC3. No scientific pipeline rerun.",
+  "inherited_execution_evidence": "provenance/RC3_VERIFICATION.json",
+  "scientific_preservation_evidence": "provenance/RC4_PRESERVATION.json"
 }
